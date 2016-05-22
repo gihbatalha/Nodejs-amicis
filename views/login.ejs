@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app="app">
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+
+  </head>
+
+  <body ng-controller="UsersController">
+
+    <span>Login: </span><br>
+    <input type="text"     ng-model="usuarioLogando.login"/><br>
+    <span>Senha: </span><br>
+    <input type="password" ng-model="usuarioLogando.senha"/><br>
+    <br>
+
+    <a ng-click="logar()"> Logar </a>
+
+    <!-- Adicionar arquivo do Angularjs -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.0/angular-ui-router.js"></script>     
+    <script src="/javascripts/app.js"></script>
+    
+    
+  </body>
+</html>

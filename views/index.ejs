@@ -3,35 +3,36 @@
   <head>
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+    
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
-
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+ 
 
   </head>
 
-  <body ng-controller="UsersController">
-    <span>Nome: </span> <br>
-    <input type="text"     ng-model="usuarioSendoAdicionado.nome"/><br>
-    <span>Data Nascimento: </span><br>
-    <input type="text"     ng-model="usuarioSendoAdicionado.dataNascimento"/><br>
-    <span>Email: </span><br>
-    <input type="text"     ng-model="usuarioSendoAdicionado.email"/><br>
-    <span>Sexo: </span><br>
-    <input type="text"     ng-model="usuarioSendoAdicionado.sexo"/><br>
-    <span>Login: </span><br>
-    <input type="text"     ng-model="usuarioSendoAdicionado.login"/><br>
-    <span>Senha: </span><br>
-    <input type="password" ng-model="usuarioSendoAdicionado.senha"/><br>
-    <br>
-    <!-- <a ng-click="add()">Cadastrar</a>
+  <body>
 
-    <br>
-    <br> -->
+    <ul>
+        <li> <a ui-sref="route1"> Route 1 </a> </li>
+        <li> <a ui-sref="route2"> Route 2 </a> </li>
+        <li> <a ui-sref="login">  Login   </a> </li>
+    </ul>
 
-    <a ng-click="logar()"> Logar </a>
+    <div ui-view>
+
+    </div>
+
+
+
+    <!-- Adicionar arquivo Materialize -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+
+    <!-- Adicionar arquivo do Angularjs -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.0/angular-ui-router.js"></script> 
+    <script src="/javascripts/app.js"></script>
+    <script src="/app/testes/controllers/route1.controller.js"></script>
 
   </body>
 </html>

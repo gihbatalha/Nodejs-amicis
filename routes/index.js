@@ -1,31 +1,19 @@
 var express = require('express');
 var router = express.Router();
-var Login   = require('../app/models/login.js');
+var User   = require('../app/models/user.js');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
-router.post('/login', function(req, res) {
-   
-  var newLogin = new Login(req.body);
-
-  newLogin.find(req.body, function (err, logins) {
-  	res.send("erro:"+err + " logins:"+logins);
-
-  	if(logins != null){
-        console.log("Success!");
-        res.redirect('/teste.ejs');
-    }
-    else
-    {
-    	
-        console.log("Error!");
-    }
-
-  
-  });
+router.get('/login', function(req, res, next) {
+  res.render('login', { title: 'Express' });
 });
+
+router.get('/home', function(req, res, next) {
+  res.render('home', { title: 'Express' });
+});
+
 
 module.exports = router;
