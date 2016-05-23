@@ -3,8 +3,8 @@ angular.module("app",['ui.router'])
 		console.log($stateProvider, $urlRouterProvider);
 		$urlRouterProvider.otherwise('/route1'); //qdo não achar nenhuma rota/default
 		$stateProvider
-			.state('route1',{url:'/route1', templateUrl:'/app/testes/templates/route1.html', controller:'route1Controller'})
-			.state('route2',{url:'/route2', templateUrl:'/app/testes/templates/route2.html', controller:'UsersController'})
+			.state('route1',{url:'/route1', templateUrl:'/app/templates/route1.html', controller:'route1Controller'})
+			.state('route2',{url:'/route2', templateUrl:'/app/templates/route2.html', controller:'UsersController'})
 			.state('login',{url:'/login', templateUrl:'/app/auth/login.html', controller:'UsersController'});
 
 	})	
