@@ -4,38 +4,38 @@
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
     
-    <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
- 
+    <!-- Materialize -->
+    <link rel="stylesheet" href="/stylesheets/materialize.css"> 
 
   </head>
 
-  <body>
+  <body ng-controller="loginController" ng-init="init()">
 
-    <ul>
-        <li> <a ui-sref="route1"> Route 1 </a> </li>
-        <li> <a ui-sref="route2"> Route 2 </a> </li>
-        <li> <a ui-sref="login">  Login   </a> </li>
-    </ul>
+  <div class="row">
+      <div class="col s12 ">
+            <div class="card-panel menu-principal">          
+
+                <a ng-show="login" class="menu-itens" ng-click="sair()"> Sair </a>
+                <span ng-show="login"> {{userLogged.nome}} </span>
+                <a ng-hide="login" class="menu-itens" ui-sref="login">  Entrar   </a>
+                <a ng-hide="login" class="menu-itens" ui-sref="newUser">  Cadastre-se   </a>
+            </div>
+      </div>
+    </div>
 
     <div ui-view>
         <!--onde será colocada as views -->
     </div>
 
 
-
-    <!-- Adicionar arquivo Materialize -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
-
     <!-- Adicionar arquivo do Angularjs -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.0/angular-ui-router.js"></script> 
+
+    <!-- Controllers -->
     <script src="/javascripts/app.js"></script>
-
-
-    <script src="/app/controllers/route1.controller.js"></script>
     <script src="/javascripts/main.js"></script>
+    <script src="/app/auth/controllers/loginController.js"></script>    
     <script src="/app/controllers/route1.controller.js"></script>
 
   </body>

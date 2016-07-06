@@ -1,8 +1,29 @@
 body {
-  padding: 50px;
+  padding: 0px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
-  color: #00B7FF;
+  /*color: #00B7FF;*/
+  color:#2c3e50;
 }
+
+.menu-principal{ 
+	height: 150px;
+	border-radius: 0px; /*não teve o resultado esperado*/
+}
+
+.menu-itens {
+  /*color: #00B7FF;*/
+  color:#2c3e50;
+  font-size: 20px;
+}
+
+.item-logar{
+
+}
+
+/*.card-panel{
+	background-color: #000000;
+}
+*/

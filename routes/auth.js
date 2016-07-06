@@ -1,7 +1,5 @@
 var express = require('express');
 var router  = express.Router();
-var User    = require('../app/models/user.js');
-
 
 router.get('/logged', function(req, res) {
 	res.json(req.session.user); //variável de sessão
@@ -9,6 +7,7 @@ router.get('/logged', function(req, res) {
 
 router.get('/logout', function(req, res) {
   req.session.destroy();
+
   res.send({status:200,message:'Sucesso!'});
 });
 
@@ -22,7 +21,7 @@ router.post('/login', function(req, res) {
         console.log("Success!");
         req.session.logged = true;
         req.session.user = logins[0];
-        res.send({status:200,message:'Sucesso!'});
+        res.send({status:200,message:'Success!'});
     }
     else
     {   	
