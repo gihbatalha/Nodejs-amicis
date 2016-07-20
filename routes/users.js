@@ -12,11 +12,13 @@ router.get('/', function(req, res) {
 
 router.post('/', function(req, res) {
     var newUser = new User(req.body);
+      console.log("New User: ",newUser);
+      console.log("Lalalala");
       newUser.save(function (err, result){
       res.send(result);
-      console.log(err);
+      console.log("post User - result:",result);
+      console.log("post User - err:",err);
   });
 });
-
 
 module.exports = router;

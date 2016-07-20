@@ -4,12 +4,13 @@ angular.module("app",['ui.router'])
 		$urlRouterProvider.otherwise('/');
 		$stateProvider
 			.state('route1',{url:'/route1', templateUrl:'/app/templates/route1.html', controller:'UsersController'})
+			.state('newUser', {url:'/newUser', templateUrl:'/app/users/templates/newUser.html', controller:'UsersController'})
+			.state('newRecipe', {url:'/newRecipe', templateUrl:'/app/recipes/templates/newRecipe.html', controller:'recipeController'})
 			.state('login',{url:'/login', templateUrl:'/app/auth/templates/login.html', controller:'loginController'});
 
 	})
 	.controller('UsersController', function($scope,$http, $state){
 		console.log("Iniciando");
-
 
 		$scope.add = function(){
 			console.log("Adicionando usuário", $scope.usuarioSendoAdicionado);
@@ -20,3 +21,5 @@ angular.module("app",['ui.router'])
 		};
 		
 	});	//end of controller
+
+

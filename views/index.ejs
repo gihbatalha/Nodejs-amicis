@@ -15,10 +15,17 @@
       <div class="col s12 ">
             <div class="card-panel menu-principal">          
 
+                <!-- itens que aparecem se o usuário estiver logado -->
                 <a ng-show="login" class="menu-itens" ng-click="sair()"> Sair </a>
                 <span ng-show="login"> {{userLogged.nome}} </span>
+                <a class="menu-itens" ui-sref="newRecipe"> Enviar nova receita </a>
+
+                <!-- itens que aparecem se o usuário NÃO estiver logado -->
                 <a ng-hide="login" class="menu-itens" ui-sref="login">  Entrar   </a>
                 <a ng-hide="login" class="menu-itens" ui-sref="newUser">  Cadastre-se   </a>
+
+                <!-- itens que não importa se está logado ou não -->
+
             </div>
       </div>
     </div>
@@ -35,7 +42,9 @@
     <!-- Controllers -->
     <script src="/javascripts/app.js"></script>
     <script src="/javascripts/main.js"></script>
-    <script src="/app/auth/controllers/loginController.js"></script>    
+
+    <script src="/app/auth/controllers/loginController.js"></script>  
+    <script src="/app/recipes/controllers/recipeController.js"></script>  
     <script src="/app/controllers/route1.controller.js"></script>
 
   </body>

@@ -1,5 +1,6 @@
 var express = require('express');
 var router  = express.Router();
+var User    = require('../app/models/user.js');
 
 router.get('/logged', function(req, res) {
 	res.json(req.session.user); //variável de sessão
@@ -14,8 +15,7 @@ router.get('/logout', function(req, res) {
 router.post('/login', function(req, res) {
   var dados = req.body;
 
-  User.find({login: dados.login, senha: dados.senha}, function (err, logins) {
-  	
+  User.find({login: dados.login, senha: dados.senha}, function (err, logins) {  	
 
   	if(logins != null && logins.length > 0){
         console.log("Success!");

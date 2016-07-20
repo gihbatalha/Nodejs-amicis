@@ -1,6 +1,5 @@
 var express = require('express');
 var router = express.Router();
-var User   = require('../app/models/user.js');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -11,8 +10,8 @@ router.get('/login', function(req, res, next) {
   res.render('login', { title: 'Express' });
 });
 
-router.get('/home', function(req, res, next) {
-  res.render('home', { title: 'Express' });
+router.get('/recipes', function(req, res, next) {
+  res.render('recipes', { title: 'Receitas' });
 });
 
 

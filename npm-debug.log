@@ -19,9 +19,9 @@
 10 error You can get their info via:
 10 error     npm owner ls projetoAmicis
 10 error There is likely additional logging output above.
-11 error System Linux 3.13.0-85-generic
+11 error System Linux 3.13.0-92-generic
 12 error command "/home/giovanna/.nvm/v0.10.28/bin/node" "/home/giovanna/.nvm/v0.10.28/bin/npm" "start"
-13 error cwd /home/giovanna/Documents/projetoAmicis
+13 error cwd /home/giovanna/Amicis/Nodejs-amicis
 14 error node -v v0.10.28
 15 error npm -v 1.4.9
 16 error code ELIFECYCLE
