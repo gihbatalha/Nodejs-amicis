@@ -19,6 +19,11 @@ angular.module("app",['ui.router'])
 				$state.go('route1'); //após add coom sucesso, direciona pra route1
 			});
 		};
+
+		$scope.colocarSexo = function(qualSexo){
+			$scope.usuarioSendoAdicionado.sexo = qualSexo;
+			console.log("O sexo é: "+ $scope.usuarioSendoAdicionado.sexo);
+		}
 		
 	});	//end of controller
 
