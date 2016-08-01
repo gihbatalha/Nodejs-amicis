@@ -21,7 +21,8 @@ angular.module("app",['ui.router'])
 		};
 
 		$scope.colocarSexo = function(qualSexo){
-			$scope.usuarioSendoAdicionado.sexo = qualSexo;
+			console.log("qual sexo: "+qualSexo);
+			$scope.usuarioSendoAdicionado.sexo = 'qualSexo';
 			console.log("O sexo é: "+ $scope.usuarioSendoAdicionado.sexo);
 		}
 		
