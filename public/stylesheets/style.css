@@ -1,20 +1,21 @@
-body {
+
+/*body {
   padding: 0px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
-  /*color: #00B7FF;*/
+  /*color: #00B7FF;
   color:#2c3e50;
 }
 
 .menu-principal{ 
 	height: 150px;
-	border-radius: 0px; /*não teve o resultado esperado*/
+	border-radius: 0px; /*não teve o resultado esperado
 }
 
 .menu-itens {
-  /*color: #00B7FF;*/
+  /*color: #00B7FF;
   color:#2c3e50;
   font-size: 20px;
 }
@@ -22,8 +23,244 @@ a {
 .item-logar{
 
 }
-
-/*.card-panel{
+.card-panel{
 	background-color: #000000;
 }
 */
+
+.teal.lighten-1 {
+  background-color: #a33838 !important;
+}
+
+.teal-text.text-lighten-1 {
+  color: #a33838 !important;
+}
+
+.collection .collection-item.avatar {
+  min-height: 25px;
+  padding-left: 40px;
+}
+
+.collection .collection-item.avatar .circle {
+  width: 22px;
+  height: 22px;
+  left: 10px;
+}
+
+.collection .collection-item.avatar .title {
+  font-size: 12px;
+  position: absolute;
+  top: 12px;
+}
+
+.collection .collection-item.active {
+  background-color: #a33838;
+}
+
+.collection a.collection-item {
+  color: #a33838;
+}
+
+.collection a.collection-item:not(.active):hover {
+  background-color: #eee;
+}
+
+.secondary-content {
+  color: #a33838;
+}
+
+span.badge {
+  font-size: 0.6rem;
+  top: 10px;
+  right: 7px;
+}
+
+span.badge.new {
+  font-size: 0.6rem;
+}
+
+.truncate {
+  font-size: 12px;
+}
+
+.card {
+  margin: 0.2rem 0 1rem 0;
+  background-image: url(file:///Y:/materialize/images/planFundo.jpg);
+  width: 207px;
+}
+
+.card .card-content {
+  padding: 10px;
+}
+
+.btn, .btn-large {
+  background-color: #a33838;
+}
+
+.btn-floating {
+  background-color: #a33838;
+}
+
+.btn-floating:hover {
+  background-color: #a33838;
+}
+
+.dropdown-content li {
+  min-height: 25px;
+}
+
+.dropdown-content li > a, .dropdown-content li > span {
+  font-size: 12px;
+  color: black;
+  line-height: 10px;
+}
+
+input:not([type]):focus:not([readonly]),
+input[type=text]:focus:not([readonly]),
+input[type=password]:focus:not([readonly]),
+input[type=email]:focus:not([readonly]),
+input[type=url]:focus:not([readonly]),
+input[type=time]:focus:not([readonly]),
+input[type=date]:focus:not([readonly]),
+input[type=datetime]:focus:not([readonly]),
+input[type=datetime-local]:focus:not([readonly]),
+input[type=tel]:focus:not([readonly]),
+input[type=number]:focus:not([readonly]),
+input[type=search]:focus:not([readonly]),
+textarea.materialize-textarea:focus:not([readonly]) {
+  border-bottom: 1px solid #a33838;
+  box-shadow: 0 1px 0 0 #a33838;
+}
+
+input:not([type]):focus:not([readonly]) + label,
+input[type=text]:focus:not([readonly]) + label,
+input[type=password]:focus:not([readonly]) + label,
+input[type=email]:focus:not([readonly]) + label,
+input[type=url]:focus:not([readonly]) + label,
+input[type=time]:focus:not([readonly]) + label,
+input[type=date]:focus:not([readonly]) + label,
+input[type=datetime]:focus:not([readonly]) + label,
+input[type=datetime-local]:focus:not([readonly]) + label,
+input[type=tel]:focus:not([readonly]) + label,
+input[type=number]:focus:not([readonly]) + label,
+input[type=search]:focus:not([readonly]) + label,
+textarea.materialize-textarea:focus:not([readonly]) + label {
+  color: #a33838;
+}
+
+.input-field .prefix.active {
+  color: #a33838;
+}
+
+[type="radio"]:checked + label:after,
+[type="radio"].with-gap:checked + label:before,
+[type="radio"].with-gap:checked + label:after {
+  border: 2px solid #a33838;
+}
+
+[type="radio"]:checked + label:after,
+[type="radio"].with-gap:checked + label:after {
+  background-color: #a33838;
+}
+
+[type="checkbox"]:checked + label:before {
+  border-right: 2px solid #a33838;
+  border-bottom: 2px solid #a33838;
+}
+
+/* Indeterminate checkbox */
+[type="checkbox"]:indeterminate + label:before {
+  border-right: 2px solid #a33838;
+}
+
+[type="checkbox"].filled-in:checked + label:after {
+  border: 2px solid #a33838;
+  background-color: #a33838;
+}
+
+[type="checkbox"].filled-in.tabbed:checked:focus + label:after {
+  background-color: #a33838;
+  border-color: #a33838;
+}
+
+.switch label input[type=checkbox]:checked + .lever:after {
+  background-color: #a33838;
+}
+
+input[type=range] + .thumb {
+  background-color: #a33838;
+}
+
+input[type=range] + .thumb .value {
+  color: #a33838;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  background-color: #a33838;
+}
+
+input[type=range]::-moz-range-thumb {
+  background: #a33838;
+}
+
+input[type=range]::-ms-thumb {
+  background: #a33838;
+}
+
+.side-nav a.btn-floating:hover {
+  background-color: #a33838;
+}
+
+.picker__date-display {
+  background-color: #a33838;
+}
+
+.picker__nav--prev:hover,
+.picker__nav--next:hover {
+  background: #dea1a1;
+}
+
+.picker__weekday-display {
+  background-color: #a33838;
+}
+
+.picker__day.picker__day--today {
+  color: #a33838;
+}
+
+.picker__day--selected,
+.picker__day--selected:hover,
+.picker--focused .picker__day--selected {
+  background-color: #a33838;
+}
+
+.picker__close, .picker__today {
+  font-size: 1.1rem;
+  padding: 0 1rem;
+  color: #343434;
+}
+
+button.picker__today:focus, button.picker__clear:focus, button.picker__close:focus {
+  background-color: #dea1a1;
+}
+
+.user-image {
+  height: 50px;
+  width: 50px;
+  border-radius: 10%;
+}
+
+.user-name {
+  font-size: 35px;
+  position: relative;
+  top: -10px;
+  color: white;
+  font-family: cursive;
+}
+
+.material-icons.send {
+  position: relative;
+  top: -2px;
+  right: 5px;
+  color: rgb(55, 55, 55);
+}

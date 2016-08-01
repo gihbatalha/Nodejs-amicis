@@ -8181,26 +8181,4 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   }
 }
 
-/* ==========================================================================
-   MEUS ADICIONAIS
-   ========================================================================== */
-.user-image {
-  height: 50px;
-  width: 50px;
-  border-radius: 10%;
-}
 
-.user-name {
-  font-size: 35px;
-  position: relative;
-  top: -10px;
-  color: white;
-  font-family: cursive;
-}
-
-.material-icons.send {
-  position: relative;
-  top: -2px;
-  right: 5px;
-  color: rgb(55, 55, 55);
-}

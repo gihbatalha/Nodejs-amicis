@@ -1,20 +1,60 @@
-<h2> Cadastro </h2>
+<!-- Modal Structure -->
+<div class="row">
+    <div class="col s12 m6">
+      <div class="modal">
+        <div class="modal-content">
+          <h4>Cadastre-se</h4>
+            <form class="col s12">
+              <div class="row">
+                <div class="input-field col s12">
+                  <input id="name" type="text" class="validate" ng-model="usuarioSendoAdicionado.nome"/>
+                  <label for="name">Nome</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s12">
+                  <input id="email" type="email" class="validate" ng-model="usuarioSendoAdicionado.email"/>
+                  <label for="email">Email</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s3">
+                  <input id="birthdate" type="date" class="validate" ng-model="usuarioSendoAdicionado.dataNascimento"/>
+                </div>
+                <div class="row">
+                  <div class="input-field col s3 offset-s3">
+                    <p>
+                      <input name="group1" type="radio" id="F" class="with-gap" ng-model="usuarioSendoAdicionado.sexo" ng-value="F"/>
+                      <label for="F">Feminino</label>
+                    </p>
+                  </div>
+                  <div class="input-field col s3">
+                    <p>
+                      <input name="group1" type="radio" id="M" class="with-gap" ng-model="usuarioSendoAdicionado.sexo" ng-value="M"/>
+                      <label for="M">Masculino</label>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s12">
+                  <input id="login" type="text" class="validate" ng-model="usuarioSendoAdicionado.login">
+                  <label for="login">Login</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s12">
+                  <input id="password" type="password" class="validate" ng-model="usuarioSendoAdicionado.senha">
+                  <label for="password">Senha</label>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <a href="" class="modal-action modal-close waves-effect waves-red btn-flat">Sair</a>
+            <a ng-click="add()" class="modal-action modal-close waves-effect waves-red btn-flat">Cadastrar</a>
+          </div>
+      </div>
+    </div>
+  </div>
 
-
-<span>Nome: </span> <br>
-<input type="text"     ng-model="usuarioSendoAdicionado.nome"/><br>
-<span>Data Nascimento: </span><br>
-<input type="text"     ng-model="usuarioSendoAdicionado.dataNascimento"/><br>
-<span>Email: </span><br>
-<input type="text"     ng-model="usuarioSendoAdicionado.email"/><br>
-<span>Sexo: </span><br>
-<input type="text"     ng-model="usuarioSendoAdicionado.sexo"/><br>
-<span>Login: </span><br>
-<input type="text"     ng-model="usuarioSendoAdicionado.login"/><br>
-<span>Senha: </span><br>
-<input type="password" ng-model="usuarioSendoAdicionado.senha"/><br>
-<br>
-
-<a ng-click="add()">Cadastrar</a>
-
-<br><br>  
