@@ -12,6 +12,8 @@ angular.module("app",['ui.router'])
 	.controller('UsersController', function($scope,$http, $state){
 		console.log("Iniciando");
 
+		$scope.usuarioSendoAdicionado.sexo = null;
+
 		$scope.add = function(){
 			console.log("Adicionando usuário", $scope.usuarioSendoAdicionado);
 			$http.post('/users', $scope.usuarioSendoAdicionado).success(function(response){
@@ -22,8 +24,9 @@ angular.module("app",['ui.router'])
 
 		$scope.colocarSexo = function(qualSexo){
 			console.log("qual sexo: "+qualSexo);
-			$scope.usuarioSendoAdicionado.sexo = 'qualSexo';
-			console.log("O sexo é: "+ $scope.usuarioSendoAdicionado.sexo);
+			//$scope.usuarioSendoAdicionado.sexo = qualSexo;
+			//console.log("O sexo é: "+ $scope.usuarioSendoAdicionado.sexo);
+
 		}
 		
 	});	//end of controller
