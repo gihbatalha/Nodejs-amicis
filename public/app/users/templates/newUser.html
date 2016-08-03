@@ -19,18 +19,18 @@
               </div>
               <div class="row">
                 <div class="input-field col s3">
-                  <input id="birthdate" type="date" class="validate" ng-model="usuarioSendoAdicionado.dataNascimento"/>
+                  <input id="birthdate" type="date" class="validate" ng-model="usuarioSendoAdicionado.dataNascimento"/> 
                 </div>
                 <div class="row">
                   <div class="input-field col s3 offset-s3">
                     <p>
-                      <input name="group1" type="radio" id="F" class="with-gap" ng-click="colocarSexo('F')"/>
+                      <input name="group1" type="radio" value="Feminino" id="F" ng-click="usuarioSendoAdicionado.sexo"/>
                       <label for="F">Feminino</label>
                     </p>
                   </div>
                   <div class="input-field col s3">
                     <p>
-                      <input name="group1" type="radio" id="M" class="with-gap" ng-click="colocarSexo('M')"/>
+                      <input name="group1" type="radio" id="M" value="Masculino" ng-click="usuarioSendoAdicionado.sexo"/>
                       <label for="M">Masculino</label>
                     </p>
                   </div>
@@ -51,8 +51,8 @@
             </form>
           </div>
           <div class="modal-footer">
-            <a href="" class="modal-action modal-close waves-effect waves-red btn-flat">Sair</a>
-            <a ng-click="add()" class="modal-action modal-close waves-effect waves-red btn-flat">Cadastrar</a>
+            <a href="#" class="modal-action modal-close waves-effect btn-flat">Sair</a>
+            <a ng-click="add()" class="modal-action modal-close waves-effect btn-flat">Cadastrar</a>
           </div>
       </div>
     </div>

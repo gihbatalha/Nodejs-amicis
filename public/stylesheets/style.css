@@ -128,8 +128,8 @@ input[type=tel]:focus:not([readonly]),
 input[type=number]:focus:not([readonly]),
 input[type=search]:focus:not([readonly]),
 textarea.materialize-textarea:focus:not([readonly]) {
-  border-bottom: 1px solid #a33838;
-  box-shadow: 0 1px 0 0 #a33838;
+  border-bottom: 1px solid #9e9e9e;
+  box-shadow: 0 1px 0 0 #9e9e9e;
 }
 
 input:not([type]):focus:not([readonly]) + label,
@@ -145,7 +145,66 @@ input[type=tel]:focus:not([readonly]) + label,
 input[type=number]:focus:not([readonly]) + label,
 input[type=search]:focus:not([readonly]) + label,
 textarea.materialize-textarea:focus:not([readonly]) + label {
-  color: #a33838;
+  color: #000;
+}
+
+
+input:not([type]).valid, input:not([type]):focus.valid,
+input[type=text].valid,
+input[type=text]:focus.valid,
+input[type=password].valid,
+input[type=password]:focus.valid,
+input[type=email].valid,
+input[type=email]:focus.valid,
+input[type=url].valid,
+input[type=url]:focus.valid,
+input[type=time].valid,
+input[type=time]:focus.valid,
+input[type=date].valid,
+input[type=date]:focus.valid,
+input[type=datetime].valid,
+input[type=datetime]:focus.valid,
+input[type=datetime-local].valid,
+input[type=datetime-local]:focus.valid,
+input[type=tel].valid,
+input[type=tel]:focus.valid,
+input[type=number].valid,
+input[type=number]:focus.valid,
+input[type=search].valid,
+input[type=search]:focus.valid,
+textarea.materialize-textarea.valid,
+textarea.materialize-textarea:focus.valid {
+  border-bottom: 1px solid #C8E6C9;
+  box-shadow: 0 1px 0 0 #C8E6C9;
+}
+
+input:not([type]).invalid, input:not([type]):focus.invalid,
+input[type=text].invalid,
+input[type=text]:focus.invalid,
+input[type=password].invalid,
+input[type=password]:focus.invalid,
+input[type=email].invalid,
+input[type=email]:focus.invalid,
+input[type=url].invalid,
+input[type=url]:focus.invalid,
+input[type=time].invalid,
+input[type=time]:focus.invalid,
+input[type=date].invalid,
+input[type=date]:focus.invalid,
+input[type=datetime].invalid,
+input[type=datetime]:focus.invalid,
+input[type=datetime-local].invalid,
+input[type=datetime-local]:focus.invalid,
+input[type=tel].invalid,
+input[type=tel]:focus.invalid,
+input[type=number].invalid,
+input[type=number]:focus.invalid,
+input[type=search].invalid,
+input[type=search]:focus.invalid,
+textarea.materialize-textarea.invalid,
+textarea.materialize-textarea:focus.invalid {
+  border-bottom: 1px solid #FFCDD2;
+  box-shadow: 0 1px 0 0 #FFCDD2;
 }
 
 .input-field .prefix.active {
@@ -211,39 +270,6 @@ input[type=range]::-ms-thumb {
   background-color: #a33838;
 }
 
-.picker__date-display {
-  background-color: #a33838;
-}
-
-.picker__nav--prev:hover,
-.picker__nav--next:hover {
-  background: #dea1a1;
-}
-
-.picker__weekday-display {
-  background-color: #a33838;
-}
-
-.picker__day.picker__day--today {
-  color: #a33838;
-}
-
-.picker__day--selected,
-.picker__day--selected:hover,
-.picker--focused .picker__day--selected {
-  background-color: #a33838;
-}
-
-.picker__close, .picker__today {
-  font-size: 1.1rem;
-  padding: 0 1rem;
-  color: #343434;
-}
-
-button.picker__today:focus, button.picker__clear:focus, button.picker__close:focus {
-  background-color: #dea1a1;
-}
-
 .user-image {
   height: 50px;
   width: 50px;
@@ -264,3 +290,7 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   right: 5px;
   color: rgb(55, 55, 55);
 }
+
+.input-field input[type=text]:focus + label {
+     color: #000;
+   }
