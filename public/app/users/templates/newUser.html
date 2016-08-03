@@ -8,13 +8,13 @@
               <div class="row">
                 <div class="input-field col s12">
                   <input id="name" type="text" class="validate" ng-model="usuarioSendoAdicionado.nome"/>
-                  <label class="active" for="name">Nome</label>
+                  <label for="name">Nome</label>
                 </div>
               </div>
               <div class="row">
                 <div class="input-field col s12">
                   <input id="email" type="email" class="validate" ng-model="usuarioSendoAdicionado.email"/>
-                  <label class="active" for="email">Email</label>
+                  <label for="email">Email</label>
                 </div>
               </div>
               <div class="row">
@@ -24,13 +24,13 @@
                 <div class="row">
                   <div class="input-field col s3 offset-s3">
                     <p>
-                      <input name="group1" type="radio" id="F" ng-click="colocarSexo('F')"/>
+                      <input name="group1" type="radio" value="Feminino" id="F" ng-click="usuarioSendoAdicionado.sexo"/>
                       <label for="F">Feminino</label>
                     </p>
                   </div>
                   <div class="input-field col s3">
                     <p>
-                      <input name="group1" type="radio" id="M" ng-click="colocarSexo('M')"/>
+                      <input name="group1" type="radio" id="M" value="Masculino" ng-click="usuarioSendoAdicionado.sexo"/>
                       <label for="M">Masculino</label>
                     </p>
                   </div>
@@ -39,20 +39,20 @@
               <div class="row">
                 <div class="input-field col s12">
                   <input id="login" type="text" class="validate" ng-model="usuarioSendoAdicionado.login">
-                  <label class="active" for="login">Login</label>
+                  <label for="login">Login</label>
                 </div>
               </div>
               <div class="row">
                 <div class="input-field col s12">
                   <input id="password" type="password" class="validate" ng-model="usuarioSendoAdicionado.senha">
-                  <label class="active" for="password">Senha</label>
+                  <label for="password">Senha</label>
                 </div>
               </div>
             </form>
           </div>
           <div class="modal-footer">
-            <a href="" class="modal-action modal-close waves-effect waves-red btn-flat">Sair</a>
-            <a ng-click="add()" class="modal-action modal-close waves-effect waves-red btn-flat">Cadastrar</a>
+            <a href="#" class="modal-action modal-close waves-effect btn-flat">Sair</a>
+            <a ng-click="add()" class="modal-action modal-close waves-effect btn-flat">Cadastrar</a>
           </div>
       </div>
     </div>
