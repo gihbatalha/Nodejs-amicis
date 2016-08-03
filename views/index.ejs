@@ -2,10 +2,19 @@
 <html ng-app="app">
   <head>
     <title><%= title %></title>
-        
-    <!-- Materialize -->
-    <link rel="stylesheet" href="/stylesheets/materialize.css"> 
+
+    <!--Import Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="/stylesheets/materialize.css"  media="screen,projection"/>
+
+    <!-- Import our css -->
     <link rel='stylesheet' href='/stylesheets/style.css' />
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        
   </head>
 
   <body ng-controller="loginController" ng-init="init()">
@@ -33,12 +42,16 @@
         <!--onde será colocada as views -->
     </div>
 
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
 
     <!-- Adicionar arquivo do Angularjs -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.0/angular-ui-router.js"></script> 
 
     <!-- Controllers -->
+    <script src="/javascripts/appMaterialize.js"></script>
     <script src="/javascripts/app.js"></script>
     <script src="/javascripts/main.js"></script>
 
