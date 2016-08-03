@@ -22,6 +22,7 @@
                 <!-- itens que aparecem se o usuário NÃO estiver logado -->
                 <a ng-hide="login" class="menu-itens" ui-sref="login">  Entrar   </a>
                 <a ng-hide="login" class="menu-itens" ui-sref="newUser">  Cadastre-se   </a>
+                <a class="menu-itens" ui-sref="newComment">  Enviar comentário </a>
 
                 <!-- itens que não importa se está logado ou não -->
 
@@ -44,6 +45,7 @@
 
     <script src="/app/auth/controllers/loginController.js"></script>  
     <script src="/app/recipes/controllers/recipeController.js"></script>  
+    <script src="/app/comments/controllers/commentController.js"></script> 
     <script src="/app/controllers/route1.controller.js"></script>
 
   </body>
