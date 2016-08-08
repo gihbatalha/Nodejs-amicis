@@ -1,4 +1,4 @@
-angular.module('datepickerBasicUsage',
+/*angular.module('datepickerBasicUsage',
     ['ngMaterial', 'ngMessages']).controller('AppCtrl', function($scope) {
   $scope.myDate = new Date();
   $scope.minDate = new Date(
@@ -13,4 +13,11 @@ angular.module('datepickerBasicUsage',
     var day = date.getDay();
     return day === 0 || day === 6;
   }
-});
+});*/
+
+$( document ).ready(function(){
+  $(".button-collapse").sideNav();
+
+  // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+  $('.modal-trigger').leanModal();
+})

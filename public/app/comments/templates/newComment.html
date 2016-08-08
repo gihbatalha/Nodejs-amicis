@@ -1,23 +1,23 @@
 <!-- Modal Structure -->
 <div class="row">
-    <div class="col s12 m6">
-      <div class="modal comment">
-        <div class="modal-content comment">
-          <h4>Novo Comentário</h4>
-          <form class="col s12">
-            <div class="row">
-              <br>
-              <div class="input-field col s12">
-          		<textarea id="textarea" class="materialize-textarea" ng-model="novoComentario.texto"></textarea>
-                <label for="textarea">Escreva aqui</label>
-               </div>
+  <div class="col s12 m6">
+    <div class="modal comment">
+      <div class="modal-content">
+        <h4>Novo Comentário</h4>
+        <form class="col s12">
+          <div class="row">
+            <br>
+            <div class="input-field col s12">
+        		  <textarea id="textarea" class="materialize-textarea" ng-model="novoComentario.texto"></textarea>
+              <label for="textarea">Escreva aqui</label>
             </div>
-          </form>
-        </div>
-        <div class="modal-footer">
-          <a href="#" class="modal-action modal-close waves-effect btn-flat">Sair</a>
-          		<a ng-click="add()" class="modal-action modal-close waves-effect btn-flat">Cadastrar</a>
-        	</div>
-    	</div>
-  	</div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <a href="#" class="modal-action modal-close waves-effect btn-flat">Sair</a>
+       	<a ng-click="add()" class="modal-action modal-close waves-effect btn-flat">Cadastrar</a>
+      </div>
+    </div>
+  </div>
 </div>
