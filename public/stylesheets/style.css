@@ -293,4 +293,14 @@ input[type=range]::-ms-thumb {
 
 .input-field input[type=text]:focus + label {
      color: #000;
-   }
+}
+
+.modal.comment {
+  height: 45%;
+}
+
+textarea.materialize-textarea {
+  overflow-y: hidden;
+  /* prevents scroll bar flash */
+  padding: 0 0;
+}
