@@ -11,7 +11,7 @@ router.get('/', function(req, res) {
 });
 
 router.post('/', function(req, res) {
-    var newTag = new Tag(req.body);
+     var newTag = new Tag(req.body);
       console.log("New Tag: ", newTag);
       newTag.save(function (err, result){
       res.send(result);
