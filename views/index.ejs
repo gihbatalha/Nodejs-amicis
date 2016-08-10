@@ -2,6 +2,7 @@
 <html ng-app="app">
   <head>
     <title><%= title %></title>
+    <link rel="icon" type="image/png" href="/images/favicon.png">
 
     <!--Import Google Icon Font-->
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -20,43 +21,48 @@
   <body ng-controller="loginController" ng-init="init()">
 
   <div class="row">
-      <div class="col s12 ">
-            <div class="card-panel menu-principal">          
-
+        <div class="navbar-fixed">
+          <nav>
+            <div class="nav-wrapper">
+              <a href="#!" class="brand-logo"><img src="/images/favicon.png"/></a>
+              <ul class="right hide-on-med-and-down">
                 <!-- itens que aparecem se o usuário estiver logado -->
-                <a ng-show="login" class="menu-itens" ng-click="sair()"> Sair </a>
-                <span ng-show="login"> {{userLogged.nome}} </span>
-                <a class="menu-itens" ui-sref="newRecipe"> Enviar nova receita </a>
-
+                <li>
+                  <a ng-show="login" class="menu-itens" ng-click="sair()"> Sair </a>
+                  <span ng-show="login"> {{userLogged.nome}} </span>
+                </li>
+                <li><a class="menu-itens" ui-sref="newRecipe"> Enviar nova receita </a></li>
                 <!-- itens que aparecem se o usuário NÃO estiver logado -->
-                <a ng-hide="login" class="menu-itens" ui-sref="login">  Entrar   </a>
-                <a ng-hide="login" class="menu-itens" ui-sref="newUser">  Cadastre-se   </a>
-                <a class="menu-itens" ui-sref="newComment">  Enviar comentário </a>
+                <li><a ng-hide="login" class="menu-itens" ui-sref="login">  Entrar   </a></li>
+                <li><a ng-hide="login" class="modal-trigger" ui-sref="newUser">  Cadastre-se   </a></li>
+                <li><a class="modal-trigger" ui-sref="newComment">  Enviar comentário </a></li>
 
-                <!-- itens que não importa se está logado ou não -->
-
+              </ul>
             </div>
-      </div>
+          </nav>
+        </div>
     </div>
 
     <div ui-view>
         <!--onde será colocada as views -->
     </div>
-
-     <!--Import jQuery before materialize.js-->
-      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-      <!-- Compiled and minified JavaScript -->
-      <script src="javascripts/main.js"></script>
-      <script src="javascripts/materialize.js"></script>
+    
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 
     <!-- Adicionar arquivo do Angularjs -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.0/angular-ui-router.js"></script> 
+    
+    <!-- Compiled and minified JavaScript -->
+    <script src="/javascripts/main.js"></script>
+    <script src="/javascripts/materialize.min.js"></script>
 
-    <!-- Controllers -->
     <script src="/javascripts/app.js"></script>
     <script src="/javascripts/main.js"></script>
+    <script src="/javascripts/appMaterialize.js"></script>
 
+    <!-- Controllers -->
     <script src="/app/auth/controllers/loginController.js"></script>  
     <script src="/app/recipes/controllers/recipeController.js"></script>  
     <script src="/app/comments/controllers/commentController.js"></script> 
