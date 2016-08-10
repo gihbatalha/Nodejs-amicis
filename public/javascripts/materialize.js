@@ -721,7 +721,7 @@ if ($) {
 
   $.fn.extend({
     openModal: function(options) {
-
+    	
       var $body = $('body');
       var oldWidth = $body.innerWidth();
       $body.css('overflow', 'hidden');
