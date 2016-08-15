@@ -11,6 +11,7 @@ var users = require('./routes/users');
 var auths = require('./routes/auth');
 var recipes = require('./routes/recipes');
 var comments = require('./routes/comments');
+var tags = require('./routes/tags');
 
 var app = express();
 
@@ -36,6 +37,7 @@ app.use('/users', users);
 app.use('/auth', auths);
 app.use('/recipes', recipes);
 app.use('/comments', comments);
+app.use('/tags', tags);
 
 
 // catch 404 and forward to error handler

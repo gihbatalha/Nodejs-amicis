@@ -7,6 +7,7 @@ angular.module("app",['ui.router'])
 			.state('newUser', {url:'/newUser', templateUrl:'/app/users/templates/newUser.html', controller:'UsersController'})
 			.state('newRecipe', {url:'/newRecipe', templateUrl:'/app/recipes/templates/newRecipe.html', controller:'recipeController'})
 			.state('newComment', {url:'/newComment', templateUrl:'/app/comments/templates/newComment.html', controller:'commentController'})
+			.state('newTag', {url:'/newTag', templateUrl:'/app/tags/templates/newTag.html', controller:'tagController'})
 			.state('login',{url:'/login', templateUrl:'/app/auth/templates/login.html', controller:'loginController'});
 
 	})
