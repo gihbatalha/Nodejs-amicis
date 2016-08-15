@@ -12,6 +12,7 @@ angular.module('app')
 			$scope.novoComentario.dataHora = ('0' + date.getDate()).slice(-2) + '/' + ('0' + (date.getMonth() + 1)).slice(-2) + '/' + date.getFullYear();
 			$scope.checkLogged();
 			$scope.novoComentario.usuario = $scope.userLogged._id;
+			$scope.novoComentario.tipo = "comentario";
 
 			console.log('-----------------------------------------------------------------------------------------------------');
 			console.log('Data do comentário: ', $scope.novoComentario.dataHora);
