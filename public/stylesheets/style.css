@@ -1,4 +1,3 @@
-
 /*body {
   padding: 0px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
@@ -85,7 +84,7 @@ span.badge.new {
 
 .card {
   margin: 0.2rem 0 1rem 0;
-  background-image: url(file:///Y:/materialize/images/planFundo.jpg);
+  background-image: url(/images/planFundo.jpg);
   width: 207px;
 }
 
@@ -303,4 +302,24 @@ textarea.materialize-textarea {
   overflow-y: hidden;
   /* prevents scroll bar flash */
   padding: 0 0;
+}
+
+nav .brand-logo {
+  position: absolute;
+  left: 30px;
+  color: #fff;
+  display: inline-block;
+  font-size: 2.1rem;
+  padding: 0;
+  white-space: nowrap;
+}
+
+nav .nav-wrapper.menu {
+  position: relative;
+  height: 100%;
+}
+
+.menu {
+  position: relative;
+  top: 300px;
 }

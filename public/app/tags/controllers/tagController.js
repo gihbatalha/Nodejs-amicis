@@ -1,3 +1,4 @@
+
 angular.module('app')
 	.controller('tagController', function($scope, $http){
 		console.log('Iniciando tagController...');
@@ -5,9 +6,9 @@ angular.module('app')
 		$scope.add= function(){
 			console.log('Adicionando nova tag...');
 
-			$scope.novaTag.situacao = pendente;
+			$scope.novaTag.situacao = "pendente";
 
-			console.log("Tag sendo add: ", $scope.novaTag)
+			console.log("Tag sendo add: ", $scope.novaTag);
 						
 			$http.post('/tags', $scope.novaTag).success(function(response){
 				console.log(response);
