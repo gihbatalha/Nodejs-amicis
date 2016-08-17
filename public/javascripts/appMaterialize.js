@@ -18,8 +18,9 @@
 $( document ).ready(function(){
   $(".button-collapse").sideNav();
 
-  // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
-  $('.modal-trigger').leanModal();
+  $('.modal-trigger').leanModal({
+    dismissible: false
+  });
 
   $('.carousel.carousel-slider').carousel({full_width: true});
 })
