@@ -35,27 +35,39 @@
               </div>
               <div class="row">
                 <div class="input-field col s12">
-          		  <textarea id="textarea" class="materialize-textarea" placeholder="Por favor, separe os ingredientes por vírgulas. Ex.: '3 xícaras de açúcar, 4 colheres de sopa de chocolate em pó e assim por diante'" ng-model="novaReceita.ingredientes"></textarea>
-                <label for="textarea">Ingredientes</label>
-              </div>
-              </div>
-              <div class="row">
-                <div class="input-field col s12">
-          		  <textarea id="textarea" class="materialize-textarea" ng-model="novoComentario.texto"></textarea>
-                <label for="textarea">Modo de preparo</label>
-              </div>
+          		  <textarea id="textarea" class="materialize-textarea" placeholder="Por favor, separe os ingredientes por vírgulas. Ex.: '1 colher de açúcar, 2 colheres de sal'" ng-model="novaReceita.ingredientes"></textarea>
+                	<label for="textarea" class="active">Ingredientes</label>
+              	</div>
               </div>
               <div class="row">
                 <div class="input-field col s12">
-                  <input id="login" type="text" class="validate" ng-model="usuarioSendoAdicionado.login">
-                  <label for="login">Login</label>
+          		  <textarea id="textarea" class="materialize-textarea" ng-model="novaReceita.modoPreparo"></textarea>
+                	<label for="textarea">Modo de preparo</label>
+              	</div>
+              </div>
+              <div class="row">
+                <div class="input-field col s4" ng-controller="categoryController" ng-model="novaReceita.categorias">
+				    <select ng-model="novaReceita.categorias">
+				      <option value="" disabled selected>Escolha uma categoria</option>
+				      <option ng-repeat="n in itens">{{n.nome}}</option>				      
+				    </select>
+				</div>
+				<div class="input-field col s4 offset-s2" ng-controller="tagController">
+				    <select ng-model="novaReceita.tags">
+				      <option value="" disabled selected>Tags</option>
+				      <option ng-repeat="n in itens">{{n.nome}}</option>			      
+				    </select>
+				</div>
+			   </div>
+              <div class="row">
+              	<div class="input-field col s3">
+                  <input id="name" type="number" class="validate" ng-model="novaReceita.tempoPreparo"/>
+                  <label for="name">Tempo de preparo</label>
                 </div>
-              </div>
-              <div class="row">
-                <div class="input-field col s12">
-                  <input id="password" type="password" class="validate" ng-model="usuarioSendoAdicionado.senha">
-                  <label for="password">Senha</label>
-                </div>
+                <div class="input-field col s3 offset-s3">
+                  <input id="name" type="number" class="validate" ng-model="novaReceita.rendimento"/>
+                  <label for="name">Rendimento</label>
+              	</div>
               </div>
             </form>
           </div>

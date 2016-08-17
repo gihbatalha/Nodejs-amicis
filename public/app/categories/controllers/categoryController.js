@@ -2,6 +2,11 @@ angular.module('app')
 	.controller('categoryController', function($scope, $http){
 		console.log('Iniciando CategoryController...');
 
+		$http.get('/category').success(function(response){
+				console.log("Retornou as categorias: ", response);
+				$scope.itens = response;
+			});
+
 		$scope.add= function(){
 			console.log('Adicionando nova tag...');
 

@@ -1,7 +1,11 @@
-
 angular.module('app')
 	.controller('tagController', function($scope, $http){
 		console.log('Iniciando tagController...');
+
+			$http.get('/tags').success(function(response){
+				console.log('Retornou as tags: ', response);
+				$scope.itens = response;
+			}); 
 
 		$scope.add= function(){
 			console.log('Adicionando nova tag...');

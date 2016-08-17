@@ -4,7 +4,7 @@ var recipeSchema = new mongoose.Schema({
 	nome: String,
 	modoPreparo: String,
   	tempoPreparo: String, // ????
- /* ingredientes: [String],*/
+    ingredientes: [String],
   	rendimento: String,
 /*  avaliacao : { type: Number, min: 0, max:5 }, */
   	comentarios: [String],
