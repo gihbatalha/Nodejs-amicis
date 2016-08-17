@@ -11,7 +11,8 @@ angular.module("app",['ui.router'])
 			.state('newCategory', {url:'/newCategory', templateUrl:'/app/categories/templates/newCategory.html', controller:'categoryController'})
 			.state('login',{url:'/login', templateUrl:'/app/auth/templates/login.html', controller:'loginController'})
 			.state('viewTags',{url:'/tags', templateUrl:'/app/general/list.html', controller:'tagManagerController'})
-			.state('viewRecipes',{url:'/recipes', templateUrl:'/app/general/list.html', controller:'recipeManagerController'});
+			.state('viewRecipes',{url:'/recipes', templateUrl:'/app/general/list.html', controller:'recipeManagerController'})
+			.state('viewCategories',{url:'/categories', templateUrl:'/app/general/list.html', controller:'categoryController'});
 
 
 
