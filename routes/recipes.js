@@ -4,11 +4,12 @@ var Recipe  = require('../app/models/recipe.js');
 
 /* GET users listing. */
 router.get('/', function(req, res) {
-  Receita.find({},function(err, receitas){
-  	console.log("Results", receitas);
-    res.json(receitas);
+  Recipe.find({},function(err, recipes){
+    console.log("Results", recipes);
+    res.json(recipes);
   });
-});
+});  
+
 
 router.post('/', function(req, res) {
       var newRecipe = new Recipe(req.body);
@@ -22,3 +23,4 @@ router.post('/', function(req, res) {
 });
 
 module.exports = router;
+

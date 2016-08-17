@@ -5,15 +5,11 @@ angular.module('app')
 			  $scope.title = "Receitas";
 			  $scope.attribute = "nome"; //qual o atributo que será exibido
 
-			$http.get('/recipes').success(function(response){
-				console.log("get Recipes: ", response);
+			  console.log("Lalalala");
 
-				$scope.itens = response;
-
-				console.log($scope.itens[0]);
-			});
-
-
-		
+			  $http.get('/recipes').success(function(response){
+			  		console.log("getRecipe:" ,response);
+			  		$scope.itens = response;
+			   });
 
 	});

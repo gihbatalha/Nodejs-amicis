@@ -17,4 +17,12 @@ angular.module('app')
 
 		};
 
+		$scope.title="Categorias";
+
+		$http.get('/category').success(function(response){
+				console.log("Categorias: ", response);
+				$scope.itens = response;
+				$state.go('route1'); //após add coom sucesso, direciona pra route1
+		});
+
 	});
