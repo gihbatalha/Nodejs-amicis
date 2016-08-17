@@ -314,6 +314,7 @@ nav .brand-logo {
   white-space: nowrap;
 }
 
+/*
 nav .nav-wrapper.menu {
   position: relative;
   height: 100%;
@@ -322,4 +323,8 @@ nav .nav-wrapper.menu {
 .menu {
   position: relative;
   top: 300px;
+}*/
+
+nav {
+  background-color: #EE6F48;
 }

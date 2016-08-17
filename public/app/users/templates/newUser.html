@@ -1,11 +1,16 @@
-<!-- Modal Structure -->
-<div class="lean-overlay"></div>
-<div class="row">
-    <div class="col s12 m6">
+<html>
+  <head>
+    <title>Amicis - cadastro</title>
 
-      <div class="modal" id="modalNewUser">
-        <div class="modal-content">
-          <h4>Cadastre-se</h4>
+  </head>
+  <body>
+    <!-- Modal Structure -->
+    <div class="lean-overlay"></div>
+    <div class="row">
+      <div class="col s12 m6">
+        <div class="modal" id="modalNewUser">
+          <div class="modal-content">
+            <h4>Cadastre-se</h4>
             <form class="col s12">
               <div class="row">
                 <div class="input-field col s12">
@@ -23,19 +28,17 @@
                 <div class="input-field col s3">
                   <input id="birthdate" type="date" class="validate" ng-model="usuarioSendoAdicionado.dataNascimento"/> 
                 </div>
-                <div class="row">
-                  <div class="input-field col s3 offset-s3">
-                    <p>
-                      <input name="group1" type="radio" value="Feminino" id="F" ng-click="usuarioSendoAdicionado.sexo"/>
-                      <label for="F">Feminino</label>
-                    </p>
-                  </div>
-                  <div class="input-field col s3">
-                    <p>
-                      <input name="group1" type="radio" id="M" value="Masculino" ng-click="usuarioSendoAdicionado.sexo"/>
-                      <label for="M">Masculino</label>
-                    </p>
-                  </div>
+                <div class="input-field col s3 offset-s3">
+                  <p>
+                    <input name="group1" type="radio" value="Feminino" id="F" ng-click="usuarioSendoAdicionado.sexo"/>
+                    <label for="F">Feminino</label>
+                  </p>
+                </div>
+                <div class="input-field col s3">
+                  <p>
+                    <input name="group1" type="radio" id="M" value="Masculino" ng-click="usuarioSendoAdicionado.sexo"/>
+                    <label for="M">Masculino</label>
+                  </p>
                 </div>
               </div>
               <div class="row">
@@ -53,11 +56,16 @@
             </form>
           </div>
           <div class="modal-footer">
-            <a href="#" class="modal-action modal-close waves-effect btn-flat">Sair</a>
+            <a href="#!" class="modal-action modal-close waves-effect btn-flat">Sair</a>
             <a ng-click="add()" class="modal-action modal-close waves-effect btn-flat">Cadastrar</a>
           </div>
+        </div>
       </div>
     </div>
-  </div>
+  </body>
+</html>
+
+
+
 
 
