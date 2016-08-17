@@ -1,10 +1,11 @@
-<h2> Nova Receita </h2>
+<!--<h2> Nova Receita </h2>
 
 
 <span>Nome da receita: </span> <br>
 <input type="text"     ng-model="novaReceita.nome"/><br>
 <!-- <span>Ingredientes: </span><br>
 <input type="text"     ng-model="novaReceita.ingredientes"/><br> -->
+<!--
 <span>Modo de preparo: </span><br>
 <input type="text"     ng-model="novaReceita.modoPreparo"/><br>
 <span>Tempo de preparo: </span><br>
@@ -13,8 +14,55 @@
 <input type="text"     ng-model="novaReceita.rendimento"/><br>
 <!-- tags -->
 <!-- categorias -->
-
+<!--
 
 <a ng-click="add()">Cadastrar</a>
 
-<br><br>  
+<br><br>  -->
+
+<!-- Modal Structure -->
+    <div class="row">
+      <div class="col s12 m6">
+        <div class="modal" id="modalNewRecipe">
+          <div class="modal-content">
+            <h4>Nova receita</h4>
+            <form class="col s12">
+              <div class="row">
+                <div class="input-field col s12">
+                  <input id="name" type="text" class="validate" ng-model="novaReceita.nome"/>
+                  <label for="name">Nome</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s12">
+          		  <textarea id="textarea" class="materialize-textarea" placeholder="Por favor, separe os ingredientes por vírgulas. Ex.: '3 xícaras de açúcar, 4 colheres de sopa de chocolate em pó e assim por diante'" ng-model="novaReceita.ingredientes"></textarea>
+                <label for="textarea">Ingredientes</label>
+              </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s12">
+          		  <textarea id="textarea" class="materialize-textarea" ng-model="novoComentario.texto"></textarea>
+                <label for="textarea">Modo de preparo</label>
+              </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s12">
+                  <input id="login" type="text" class="validate" ng-model="usuarioSendoAdicionado.login">
+                  <label for="login">Login</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s12">
+                  <input id="password" type="password" class="validate" ng-model="usuarioSendoAdicionado.senha">
+                  <label for="password">Senha</label>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <a href="#!" class="modal-action modal-close waves-effect btn-flat">Sair</a>
+            <a ng-click="add()" class="modal-action modal-close waves-effect btn-flat">Cadastrar</a>
+          </div>
+        </div>
+      </div>
+    </div>
