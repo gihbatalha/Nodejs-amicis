@@ -1,6 +1,13 @@
 <h2>{{title}}</h2>
 
-
+<ul class="collection">
+    <li class="collection-item avatar" ng-repeat="i in itens">
+        <img class="receita" src="/images/c1.jpg"/>
+      	<span class="title">{{ i.nome }}</span>
+	      	Enviado por:
+    </li>
+ </ul>
+<!--
 <ul>
-    <li ng-repeat="i in itens"> {{ i.nome }} </li> <!-- nao é .nome - tem que ser algo genérico -->
-</ul>
+    <li ng-repeat="i in itens"> {{ i.nome }} </li> <!-- nao é .nome - tem que ser algo genérico --><!--
+</ul>-->

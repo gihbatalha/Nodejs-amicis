@@ -6,7 +6,9 @@ var recipeSchema = new mongoose.Schema({
   	tempoPreparo: String, // ????
     ingredientes: [String],
   	rendimento: String,
-  	situacao: String // se está aprovada/pendente/recusada para ser exibida no site.
+  	situacao: String, // se está aprovada/pendente/recusada para ser exibida no site.
+    tags: [String],
+    categorias: [String]
 });
 
 
@@ -14,9 +16,6 @@ var recipeSchema = new mongoose.Schema({
 //fotos das receitas
 /*  avaliacao : { type: Number, min: 0, max:5 }, */
   /*	comentarios: [String],
-  	duvidas: [String],
-  	tags: [String],
-  	categorias: [String],*/
-  	 /* ingredientes: [String],*/
+  	duvidas: [String],*/
 
 module.exports = mongoose.model('Recipe', recipeSchema);
