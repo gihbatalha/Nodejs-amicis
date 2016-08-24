@@ -8,7 +8,8 @@ var recipeSchema = new mongoose.Schema({
   	rendimento: String,
   	situacao: String, // se está aprovada/pendente/recusada para ser exibida no site.
     tags: [String],
-    categorias: [String]
+    categorias: [String],
+    autor : String
 });
 
 
