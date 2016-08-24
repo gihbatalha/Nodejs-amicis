@@ -3,7 +3,8 @@
 <ul class="collection">
     <li class="collection-item avatar" ng-repeat="i in itens">
         <img class="receita" src="/images/c1.jpg"/>
-      	<span class="title">{{ i.nome }}</span>
+      	<a href="item.html" class="title">{{ i.nome }}</a>
+      	<a ng-click="add(i)" ng-controller="bookController"> Adicionar ao livro de receitas </a>
 	      	Enviado por:
     </li>
  </ul>
