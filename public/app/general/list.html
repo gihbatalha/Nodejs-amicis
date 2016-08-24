@@ -3,11 +3,15 @@
 <ul class="collection">
     <li class="collection-item avatar" ng-repeat="i in itens">
         <img class="receita" src="/images/c1.jpg"/>
-      	<span class="title">{{ i.nome }}</span>
-	      	Enviado por:
+      	<a href="item.html" class="title">{{ i.nome }}</a>
+	    <span class="info receita dir"> 
+	    	Enviado por: {{ i.autor }}<br>
+	    	Tags: {{ i.tags }}
+	    </span>
+
+	    <span class="info receita esq"> 
+	    	Tempo Rendimento: {{ i.tempoPreparo }} minutos<br>
+	    	Avaliação: {{ i.avaliacao }}
+	    </span>
     </li>
  </ul>
-<!--
-<ul>
-    <li ng-repeat="i in itens"> {{ i.nome }} </li> <!-- nao é .nome - tem que ser algo genérico --><!--
-</ul>-->

@@ -53,7 +53,7 @@
 				    </select>
 				</div>
 				<div class="input-field col s4 offset-s2" ng-controller="tagController">
-				    <select ng-model="novaReceita.tags">
+				    <select ng-model="novaReceita.tags" multiple>
 				      <option value="" disabled selected>Tags</option>
 				      <option ng-repeat="n in itens">{{n.nome}}</option>			      
 				    </select>

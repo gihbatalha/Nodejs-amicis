@@ -457,3 +457,22 @@ img.receita {
   height: 100px;
 }
 
+.info.receita.dir {
+  position: absolute;
+  top: 55px;
+  left: 150px;
+}
+
+.info.receita.esq {
+  position: absolute;
+  top: 55px;
+  left: 1250px;
+}
+
+a:link.title, a:visited.title, a:active.title {
+  color: rgba(0, 0, 0, 0.87);
+}
+
+a:hover.title {
+  color: rgba(0, 0, 0, 0.7);
+}
