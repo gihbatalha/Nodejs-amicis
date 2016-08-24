@@ -4,6 +4,7 @@
     <li class="collection-item avatar" ng-repeat="i in itens">
         <img class="receita" src="/images/c1.jpg"/>
       	<a href="item.html" class="title">{{ i.nome }}</a>
+      	<a ng-click="add(i)" ng-controller="bookController"> Adicionar ao livro de receitas </a>
 	    <span class="info receita dir"> 
 	    	Enviado por: {{ i.autor }}<br>
 	    	Tags: {{ i.tags }}
