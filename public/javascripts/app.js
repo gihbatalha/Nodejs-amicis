@@ -12,11 +12,12 @@ angular.module("app",['ui.router'])
 			.state('login',{url:'/login', templateUrl:'/app/auth/templates/login.html', controller:'loginController'})
 			.state('viewTags',{url:'/tags', templateUrl:'/app/general/list.html', controller:'tagManagerController'})
 			.state('viewRecipes',{url:'/recipes', templateUrl:'/app/general/list.html', controller:'recipeManagerController'})
-			.state('viewCategories',{url:'/categories', templateUrl:'/app/general/list.html', controller:'categoryController'});
+			.state('viewCategories',{url:'/categories', templateUrl:'/app/general/list.html', controller:'categoryController'})
 
-
+			.state('viewRecipesByParam',{url:'/:valueParam?param', templateUrl:'/app/general/list.html', controller:'recipeManagerController'});
 
 	})
+	
 	.controller('UsersController', function($scope,$http, $state){
 		console.log("Iniciando");
 
