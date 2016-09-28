@@ -59,7 +59,9 @@
 
             <li><a  ui-sref="viewRecipesByParam({param : 'tags', valueParam: 'Lalalala'})">  Lalalala </a></li>
 
-            <li><a class="menu-itens" ui-sref="newRecipe"> Enviar nova receita </a></li>
+            <li><a ng-show="!login" class="menu-itens" ui-sref="login"> Enviar nova receita </a></li>
+            <li><a ng-show="login" class="menu-itens" ui-sref="newRecipe"> Enviar nova receita </a></li> 
+
             <li><a ng-hide="login" class="menu-itens" ui-sref="login">  Entrar   </a></li>
             <li><a ng-hide="login" class="modal-trigger" ui-sref="newUser">  Cadastre-se   </a></li>
 
