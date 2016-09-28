@@ -39,7 +39,7 @@
         <div class="nav-wrapper">
           <a href="#!" class="brand-logo">Amicis</a>
           <ul class="right hide-on-med-and-down">    
-                  
+
             <!-- Dropdown Structure -->
             <ul id="dropdownMenu" class="dropdown-content">
                 <!-- <li><a class="modal-trigger" ui-sref="newComment"> Enviar comentário </a></li> -->
@@ -59,10 +59,6 @@
                 <li><a  ui-sref="viewRecipesByParam({param : 'tags', valueParam: 'Lalalala'})">  Lalalala </a></li>
             </ul>
 
-            <!--A variável "login" define se o item irá aparecer qdo o usuário estiver deslogado, ou somente logado -->
-            <li><a ng-show="!login" class="menu-itens" ui-sref="login"> Enviar nova receita </a></li>
-            <li><a ng-show="login" class="menu-itens" ui-sref="newRecipe"> Enviar nova receita </a></li> 
-
             <li><a ng-hide="login" class="menu-itens" ui-sref="login">  Entrar   </a></li>
             <li><a ng-hide="login" class="modal-trigger" ui-sref="newUser">  Cadastre-se   </a></li>
 
@@ -71,12 +67,39 @@
               <a ng-show="login" class="menu-itens" ng-click="sair()"> Sair </a>              
             </li>
 
+            <!--A variável "login" define se o item irá aparecer qdo o usuário estiver deslogado, ou somente logado -->
+            <li><a ng-show="!login" class="menu-itens" ui-sref="login"> Enviar nova receita </a></li>
+            <li><a ng-show="login" class="menu-itens" ui-sref="newRecipe"> Enviar nova receita </a></li> 
+
             <!-- Dropdown Trigger -->
             <li><a class="dropdown-button" href="#!" data-activates="dropdownMenu"><i class="material-icons">list</i></a></li>
 
           </ul>
         </div>
       </nav>
+    </div>
+    <div class="row">
+        <nav class="segundaL">
+            <div class="nav-wrapper segundaL">
+            <ul class="hide-on-med-and-down">
+                <!-- <li><a class="modal-trigger" ui-sref="newComment"> Enviar comentário </a></li> -->
+                <!-- <li><a class="modal-trigger" ui-sref="newTag">  Adicionar Tag </a></li> -->
+                <!-- <li><a class="modal-trigger" ui-sref="newCategory">  Adicionar Categoria </a></li> -->                
+                <!-- <li><a  ui-sref="viewTags"> Tags </a></li> -->
+                <!-- <li><a  ui-sref="viewRecipesByParam({param : 'viewRecipes'})">  ver Receitas </a></li>  ARRUMAR ARRUMAR ARRUMAR ARRUMAR ARRUMAR-->
+                <!-- <li><a  ui-sref="viewCategories"> Categorias </a></li> -->
+                <li><a  ui-sref="viewRecipesByParam({param : 'categorias', valueParam: 'Bebidas'})">Bebidas </a>
+                <li class="divider"></li>
+                <li><a  ui-sref="viewRecipesByParam({param : 'categorias', valueParam: 'Caldos'})">Caldos </a>
+                <li class="divider"></li>
+                <li><a  ui-sref="viewRecipesByParam({param : 'categorias', valueParam: 'Doces'})">Doces</a>
+                <li class="divider"></li>
+                <li><a  ui-sref="viewRecipesByParam({param : 'categorias', valueParam: 'Salgados'})">Salgados</a>
+                <li class="divider"></li>
+                <li><a  ui-sref="viewRecipesByParam({param : 'tags', valueParam: 'Lalalala'})">  Lalalala </a></li>
+            </ul>
+          </div>
+        </nav>
     </div>
 
     <div ui-view>

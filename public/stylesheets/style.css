@@ -317,6 +317,13 @@ nav .brand-logo {
   white-space: nowrap;
 }
 
+.nav-wrapper.segundaL {
+  position: relative;
+  margin: -29px 0;
+  height: 100%;
+  background-color: #ef9a9a;
+}
+
 /*
 nav .nav-wrapper.menu {
   position: relative;
@@ -488,4 +495,14 @@ a:link.title, a:visited.title, a:active.title {
 
 a:hover.title {
   color: rgba(0, 0, 0, 0.7);
+}
+
+@media only screen and (min-width: 601px) {
+  nav > div .nav-wrapper.segundaL i {
+    height: 40px;
+    line-height: 64px;
+  }
+  .navbar-fixed {
+    height: 64px;
+  }
 }
