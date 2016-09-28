@@ -9,7 +9,9 @@ angular.module('app')
 
 				if(response.status == 200){ 
 					$scope.login = true;
-					console.log("login: ",$scope.login );
+					console.log("login: ",$scope.login );	
+					window.location.replace("http://localhost:3000/#/!");
+					window.location.reload();
 					/*$state.go("route1");*/
 				}else{
 					//ou rota de erro

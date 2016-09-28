@@ -1,7 +1,31 @@
-	<span>Login: </span><br>
-    <input type="text"     ng-model="usuarioLogando.login"/><br>
-    <span>Senha: </span><br>
-    <input type="password" ng-model="usuarioLogando.senha"/><br>
-    <br>
+<!-- Modal Structure -->
+    <div class="row">
+      <div class="col s12 m6"> 
+        <div class="modal login" id="modalLogin">
+          <div class="modal-content">
+            <h4>Acessar conta</h4>
+            <form class="col s12">
+              	<div class="row">
+                	<div class="input-field col s12">
+                		<span id="erro"></span>
+                  		<input id="login" type="text" ng-model="usuarioLogando.login">
+                  		<label for="login">Login</label>
+                	</div>
+              	</div>
+              	<div class="row">
+                	<div class="input-field col s12">
+                  		<input id="password" type="password" ng-model="usuarioLogando.senha">
+                  		<label for="password">Senha</label>
+                	</div>
+              	</div>
+            </form>
+        </div>
+        <div class="modal-footer">
+          	<a href="#" class="modal-action modal-close waves-effect btn-flat">Sair</a>
+            <a ng-controller="loginController" ng-click="logar()" class="modal-action modal-close waves-effect btn-flat">Entrar</a>
+        </div>
+    </div>
 
-    <a ng-controller="loginController" ng-click="logar()"> Entrar </a>
+
+
+

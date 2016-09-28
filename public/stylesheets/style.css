@@ -296,9 +296,10 @@ input[type=range]::-ms-thumb {
      color: #000;
 }
 
-.modal.comment {
+.modal.comment, .modal.login {
   height: 45%;
 }
+
 
 textarea.materialize-textarea {
   overflow-y: hidden;
