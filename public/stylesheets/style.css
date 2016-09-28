@@ -453,6 +453,10 @@ select:disabled {
   padding-left: 1rem;
 }
 
+.select-dropdown.menu {
+  width: 150px;
+}
+
 img.receita {
   width: 100px;
   height: 100px;
