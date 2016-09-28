@@ -6,13 +6,13 @@
       	<a href="item.html" class="title">{{ i.nome }}</a>
       	<!-- <a ng-click="add(i)" ng-controller="bookController"> Adicionar ao livro de receitas </a> -->
 	    <span class="info receita dir"> 
-	    	Enviado por: {{ i.autor }}<br>
+	    	Enviado por: {{ autorRecipe}}<br>
 	    </span>
 	    	
 	    	<div class="tags receita dir">
 		    	<span  > Tags: </span>
 		    	<ul>
-		    		<li ng-repeat="t in i.tags"> {{t}} </li>
+		    		<li ng-repeat="tag in i.tags"> {{tag}} </li>
 		        <ul>
 	        </div>
 	    

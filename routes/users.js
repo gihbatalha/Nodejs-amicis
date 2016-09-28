@@ -11,12 +11,12 @@ router.get('/', function(req, res) {
 });
 
 /* GET users listing. */
-router.get('/:id', function(req, res) {
+router.get('/:id', function(request, res) {
   console.log("Get user com parametro - passado o id:", request.params.id);
- /* User.findOne({'_id':request.params.id},function(err, users){
+  User.findOne({'_id':request.params.id},function(err, users){
     console.log("User com o id (", request.params.id, ") : ", users);
     res.json(users);
-  });*/
+  });
 });
 
 

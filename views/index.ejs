@@ -39,28 +39,34 @@
         <div class="nav-wrapper">
           <a href="#!" class="brand-logo">Amicis</a>
           <ul class="right hide-on-med-and-down">
-            <!-- itens que aparecem se o usuário estiver logado -->
-            <li>
-              <a ng-show="login" class="menu-itens" ng-click="sair()"> Sair </a>
-              <span ng-show="login"> {{userLogged.nome}} </span>
-            </li>
-            <li><a ng-show="login" class="menu-itens" ui-sref="newRecipe"> Enviar nova receita </a></li>
-            
-            <!-- itens que aparecem se o usuário NÃO estiver logado -->
-            <li><a ng-hide="login" class="menu-itens" ui-sref="login">  Entrar   </a></li>
-            <li><a ng-hide="login" class="modal-trigger" ui-sref="newUser">  Cadastre-se   </a></li>
+           
+<!--A variável "login" define se o item irá aparecer qdo o usuário estiver deslogado, ou somente logado -->
+                              
 
-            <li><a class="modal-trigger" ui-sref="newComment">  Enviar comentário </a></li>
+            <!-- <li><a class="modal-trigger" ui-sref="newComment">  Enviar comentário </a></li> -->
 
             <!-- <li><a class="modal-trigger" ui-sref="newTag">  Adicionar Tag </a></li> -->
             <!-- <li><a class="modal-trigger" ui-sref="newCategory">  Adicionar Categoria </a></li> -->
 
-            <li><a  ui-sref="viewTags">  ver Tags </a></li>
+            <!-- <li><a  ui-sref="viewTags">  ver Tags </a></li> -->
             <!-- <li><a  ui-sref="viewRecipesByParam({param : 'viewRecipes'})">  ver Receitas </a></li>  ARRUMAR ARRUMAR ARRUMAR ARRUMAR ARRUMAR-->
-            <li><a  ui-sref="viewCategories">  ver Categorias </a></li>
+            <!-- <li><a  ui-sref="viewCategories">  ver Categorias </a></li> -->
 
-            <li><a  ui-sref="viewRecipesByParam({param : 'categorias', valueParam: 'Caldos'})">  Caldos </a>
+            <li><a  ui-sref="viewRecipesByParam({param : 'categorias', valueParam: 'Caldos'})">Caldos </a>
+            <li><a  ui-sref="viewRecipesByParam({param : 'categorias', valueParam: 'Bebidas'})">Bebidas </a>
+            <li><a  ui-sref="viewRecipesByParam({param : 'categorias', valueParam: 'Salgados'})">Salgados</a>
+            <li><a  ui-sref="viewRecipesByParam({param : 'categorias', valueParam: 'Doces'})">Doces</a>
+
             <li><a  ui-sref="viewRecipesByParam({param : 'tags', valueParam: 'Lalalala'})">  Lalalala </a></li>
+
+            <li><a class="menu-itens" ui-sref="newRecipe"> Enviar nova receita </a></li>
+            <li><a ng-hide="login" class="menu-itens" ui-sref="login">  Entrar   </a></li>
+            <li><a ng-hide="login" class="modal-trigger" ui-sref="newUser">  Cadastre-se   </a></li>
+
+            <li>
+              <span ng-show="login"> {{userLogged.nome}} </span>
+              <a ng-show="login" class="menu-itens" ng-click="sair()"> Sair </a>              
+            </li>
 
           </ul>
         </div>
