@@ -11,7 +11,8 @@ angular.module('app')
 			  console.log("$scope.param: ", $scope.param);
 			  console.log("$scope.valueParam: ", $scope.valueParam);
 
-			  $scope.title = "Receitas";
+			  $scope.autorRecipe = "";
+			  $scope.title = $scope.valueParam;
 			  $scope.attribute = "nome"; //qual o atributo que será exibido
 
 
@@ -27,6 +28,16 @@ angular.module('app')
 			   $http.get('/recipes/'+$scope.valueParam +'/'+$scope.param).success(function(response){
 			  		console.log("Resposta:", response);
 			  		$scope.itens = response;
+
+			  		angular.forEach($scope.itens,function(recipe,index){
+     					console.log("valorDoForEach: ", recipe.autor);
+						$http.get('/users/'+ recipe.autor).success(function(user){
+							$scope.autorRecipe = user.nome;
+
+						});
+
+					});
+
 			    });
 
 			  $scope.getRecipesByCategory= function(category){

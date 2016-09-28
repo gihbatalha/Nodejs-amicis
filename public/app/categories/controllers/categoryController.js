@@ -1,5 +1,5 @@
 angular.module('app')
-	.controller('categoryController', function($scope, $http){
+	.controller('categoryController', function($scope, $http, $state){
 		console.log('Iniciando CategoryController...');
 
 		$http.get('/category').success(function(response){
