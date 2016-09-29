@@ -319,9 +319,14 @@ nav .brand-logo {
 
 .nav-wrapper.segundaL {
   position: relative;
+  left: 29%;
   margin: -29px 0;
   height: 100%;
-  background-color: #ef9a9a;
+  width: 900px;
+}
+
+.nav-wrapper.segundaL ul li {
+      padding: 0 30px;
 }
 
 /*
@@ -337,6 +342,17 @@ nav .nav-wrapper.menu {
 
 nav {
   background-color: #c62828;
+}
+
+nav.segundaL {
+  line-height: 40px;
+  height: 40px;
+  background-color: #ef9a9a;
+}
+
+ nav.segundaL i {
+  line-height: 40px;
+  height: 40px;
 }
 
 /* Select Field
@@ -495,14 +511,4 @@ a:link.title, a:visited.title, a:active.title {
 
 a:hover.title {
   color: rgba(0, 0, 0, 0.7);
-}
-
-@media only screen and (min-width: 601px) {
-  nav > div .nav-wrapper.segundaL i {
-    height: 40px;
-    line-height: 64px;
-  }
-  .navbar-fixed {
-    height: 64px;
-  }
 }
