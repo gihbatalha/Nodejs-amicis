@@ -317,29 +317,6 @@ nav .brand-logo {
   white-space: nowrap;
 }
 
-.nav-wrapper.segundaL {
-  position: relative;
-  left: 29%;
-  margin: -29px 0;
-  height: 100%;
-  width: 900px;
-}
-
-.nav-wrapper.segundaL ul li {
-      padding: 0 30px;
-}
-
-/*
-nav .nav-wrapper.menu {
-  position: relative;
-  height: 100%;
-}
-
-.menu {
-  position: relative;
-  top: 300px;
-}*/
-
 nav {
   background-color: #c62828;
 }
@@ -353,6 +330,14 @@ nav.segundaL {
  nav.segundaL i {
   line-height: 40px;
   height: 40px;
+}
+
+.nav-wrapper.segundaL {
+  position: relative;
+  left: 35%;
+  margin: -29px 0;
+  height: 100%;
+  width: 900px;
 }
 
 /* Select Field

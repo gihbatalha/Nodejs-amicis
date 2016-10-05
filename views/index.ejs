@@ -42,21 +42,15 @@
 
             <!-- Dropdown Structure -->
             <ul id="dropdownMenu" class="dropdown-content">
-                <!-- <li><a class="modal-trigger" ui-sref="newComment"> Enviar comentário </a></li> -->
-                <!-- <li><a class="modal-trigger" ui-sref="newTag">  Adicionar Tag </a></li> -->
-                <!-- <li><a class="modal-trigger" ui-sref="newCategory">  Adicionar Categoria </a></li> -->                
-                <!-- <li><a  ui-sref="viewTags"> Tags </a></li> -->
-                <!-- <li><a  ui-sref="viewRecipesByParam({param : 'viewRecipes'})">  ver Receitas </a></li>  ARRUMAR ARRUMAR ARRUMAR ARRUMAR ARRUMAR-->
-                <!-- <li><a  ui-sref="viewCategories"> Categorias </a></li> -->
-                <li><a  ui-sref="viewRecipesByParam({param : 'categorias', valueParam: 'Bebidas'})">Bebidas </a>
+                <li><a ui-sref="viewRecipesByParam({param : 'categorias', valueParam: 'Bebidas'})">Bebidas </a>
                 <li class="divider"></li>
-                <li><a  ui-sref="viewRecipesByParam({param : 'categorias', valueParam: 'Caldos'})">Caldos </a>
+                <li><a ui-sref="viewRecipesByParam({param : 'categorias', valueParam: 'Caldos'})">Caldos </a>
                 <li class="divider"></li>
-                <li><a  ui-sref="viewRecipesByParam({param : 'categorias', valueParam: 'Doces'})">Doces</a>
+                <li><a ui-sref="viewRecipesByParam({param : 'categorias', valueParam: 'Doces'})">Doces</a>
                 <li class="divider"></li>
-                <li><a  ui-sref="viewRecipesByParam({param : 'categorias', valueParam: 'Salgados'})">Salgados</a>
+                <li><a ui-sref="viewRecipesByParam({param : 'categorias', valueParam: 'Salgados'})">Salgados</a>
                 <li class="divider"></li>
-                <li><a  ui-sref="viewRecipesByParam({param : 'tags', valueParam: 'Lalalala'})">  Lalalala </a></li>
+                <li><a ui-sref="viewRecipesByParam({param : 'tags', valueParam: 'Lalalala'})">  Lalalala </a></li>
             </ul>
 
             <li><a ng-hide="login" class="menu-itens" ui-sref="login">  Entrar   </a></li>
@@ -89,29 +83,23 @@
                     <!-- <li><a  ui-sref="viewRecipesByParam({param : 'viewRecipes'})">  ver Receitas </a></li>  ARRUMAR ARRUMAR ARRUMAR ARRUMAR ARRUMAR-->
                     <!-- <li><a  ui-sref="viewCategories"> Categorias </a></li> -->
                     <!-- <li><a  ui-sref="viewRecipesByParam({param : 'tags', valueParam: 'Lalalala'})">  Lalalala </a></li> -->
-                    <li><a  ui-sref="viewRecipesByParam({param : 'categorias', valueParam: 'Bebidas'})">Bebidas </a>
-                    <li><a  ui-sref="viewRecipesByParam({param : 'categorias', valueParam: 'Caldos'})">Caldos </a>
-                    <li><a  ui-sref="viewRecipesByParam({param : 'categorias', valueParam: 'Doces'})">Doces</a>
-                    <li><a  ui-sref="viewRecipesByParam({param : 'categorias', valueParam: 'Salgados'})">Salgados</a>                    
-                    <li><a class="dropdown-button" href="#!" data-activates="dropdownEstilos">Estilos de vida<i class="tiny material-icons">list</i></a></li>
+                    <li><a ui-sref="viewRecipesByParam({param : 'categorias', valueParam: 'Bebidas'})">Bebidas </a>
+                    <li><a ui-sref="viewRecipesByParam({param : 'categorias', valueParam: 'Caldos'})">Caldos </a>
+                    <li><a ui-sref="viewRecipesByParam({param : 'categorias', valueParam: 'Doces'})">Doces</a>
+                    <li><a ui-sref="viewRecipesByParam({param : 'categorias', valueParam: 'Salgados'})">Salgados</a>                    
+                    <li><a class="dropdown-button" href="#!" data-activates="dropdownEstilos">Estilos de vida<i class="tiny material-icons right">arrow_drop_down</i></a></li>
 
                      <!-- Dropdown Structure -->
                     <ul id="dropdownEstilos" class="dropdown-content">
-                        <!-- <li><a class="modal-trigger" ui-sref="newComment"> Enviar comentário </a></li> -->
-                        <!-- <li><a class="modal-trigger" ui-sref="newTag">  Adicionar Tag </a></li> -->
-                        <!-- <li><a class="modal-trigger" ui-sref="newCategory">  Adicionar Categoria </a></li> -->                
-                        <!-- <li><a  ui-sref="viewTags"> Tags </a></li> -->
-                        <!-- <li><a  ui-sref="viewRecipesByParam({param : 'viewRecipes'})">  ver Receitas </a></li>  ARRUMAR ARRUMAR ARRUMAR ARRUMAR ARRUMAR-->
-                        <!-- <li><a  ui-sref="viewCategories"> Categorias </a></li> -->
-                        <li><a  ui-sref="viewRecipesByParam({param : 'categorias', valueParam: 'Bebidas'})">Bebidas </a>
+                        <li><a ui-sref="viewRecipesByParam({param : 'categorias', valueParam: 'Bebidas'})">Bebidas </a>
                         <li class="divider"></li>
-                        <li><a  ui-sref="viewRecipesByParam({param : 'categorias', valueParam: 'Caldos'})">Caldos </a>
+                        <li><a ui-sref="viewRecipesByParam({param : 'categorias', valueParam: 'Caldos'})">Caldos </a>
                         <li class="divider"></li>
-                        <li><a  ui-sref="viewRecipesByParam({param : 'categorias', valueParam: 'Doces'})">Doces</a>
+                        <li><a ui-sref="viewRecipesByParam({param : 'categorias', valueParam: 'Doces'})">Doces</a>
                         <li class="divider"></li>
-                        <li><a  ui-sref="viewRecipesByParam({param : 'categorias', valueParam: 'Salgados'})">Salgados</a>
+                        <li><a ui-sref="viewRecipesByParam({param : 'categorias', valueParam: 'Salgados'})">Salgados</a>
                         <li class="divider"></li>
-                        <li><a  ui-sref="viewRecipesByParam({param : 'tags', valueParam: 'Lalalala'})">  Lalalala </a></li>
+                        <li><a ui-sref="viewRecipesByParam({param : 'tags', valueParam: 'Lalalala'})">  Lalalala </a></li>
                     </ul>
                 </ul>
             </div>
