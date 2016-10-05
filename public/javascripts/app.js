@@ -14,7 +14,9 @@ angular.module("app",['ui.router'])
 			.state('viewRecipes',{url:'/recipes', templateUrl:'/app/general/list.html', controller:'recipeManagerController'})
 			/*.state('viewCategories',{url:'/categories', templateUrl:'/app/general/list.html', controller:'categoryController'})*/
 
-			.state('viewRecipesByParam',{url:'/:valueParam?param', templateUrl:'/app/general/list.html', controller:'recipeManagerController'});
+			.state('viewRecipesByParam',{url:'/:valueParam?param', templateUrl:'/app/general/list.html', controller:'recipeManagerController'})
+			.state('viewDetailsRecipe',{url:'/details', templateUrl:'/app/general/details.html', controller:'recipeManagerController'});
+
 
 	})
 	
