@@ -47,16 +47,21 @@
               </div>
               <div class="row">
                 <div class="input-field col s4" ng-controller="categoryController" ng-model="novaReceita.categorias">
-				    <select ng-model="novaReceita.categorias">
+
+				    <select name="categorias" ng-model="novaReceita.categorias">
 				      <option value="" disabled selected>Escolha uma categoria</option>
-				      <option ng-repeat="n in itens">{{n.nome}}</option>				      
-				    </select>
+				      <option value="{{n.nome}}" ng-repeat="n in itens"> {{n.nome}} </option>		
+                    
+				    </select>            
+
 				</div>
 				<div class="input-field col s4 offset-s2" ng-controller="tagController">
-				    <select ng-model="novaReceita.tags" multiple>
-				      <option value="" disabled selected>Tags</option>
-				      <option ng-repeat="n in itens">{{n.nome}}</option>			      
-				    </select>
+
+            <select name="tags" id="tags" ng-model="novaReceita.tags" multiple>
+              <option value="" disabled selected>Tags</option> 
+              <option value="{{n.nome}}" ng-repeat="n in itens">{{n.nome}}</option>
+            </select><br>
+            
 				</div>
 			   </div>
               <div class="row">
