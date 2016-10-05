@@ -47,6 +47,15 @@ angular.module('app')
 			    });
 
 			  } 
+
+			  $scope.detailsOf = function(id){
+			  		console.log("Entrou no detailsOf");
+			  		console.log("id: ", id);
+
+			  		$http.get('/recipes/'+ id +'/id').success(function(response){
+			  			console.log("Resposta detailsOf: ",response);
+			  		});
+			  }
 	  
 
 	});
