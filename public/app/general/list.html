@@ -3,7 +3,7 @@
 <ul class="collection">
     <li class="collection-item avatar" ng-repeat="i in itens">
         <img class="receita" src="/images/c1.jpg"/>
-      	<a ui-sref="viewDetailsRecipe" ng-click="detailsOf(i._id)" class="title">{{ i.nome }}</a>
+      	<a ui-sref="viewDetailsRecipe({id: i._id})" ng-click="detailsOf(i._id)" class="title">{{ i.nome }}</a>
       	<!-- <a ng-click="add(i)" ng-controller="bookController"> Adicionar ao livro de receitas </a> -->
 	    <span class="info receita dir"> 
 	    	Enviado por: {{ autorRecipe}}<br>
