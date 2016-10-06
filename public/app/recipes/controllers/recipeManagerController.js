@@ -56,7 +56,10 @@ angular.module('app')
 
 			  		$http.get('/recipes/'+ id +'/id').success(function(response){
 			  			console.log("Resposta detailsOf: ",response);
-			  			$scope.recipe = response;
+			  			$scope.details = response[0];
+
+			  			console.log("$scope.details", $scope.details);
+
 			  		});
 			  }
 	  

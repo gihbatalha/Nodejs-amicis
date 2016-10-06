@@ -1,9 +1,39 @@
 angular.module('app')
-	.controller('loginController', function($scope, $http){
+	.controller('loginController', function($scope, $http, $state){
 		console.log('Iniciando loginController...');
 
 		$scope.logar= function(){
 			console.log("Logando...");
+			console.log("usuarioLogando.login:", $scope.usuarioLogando.login);
+			console.log("usuarioLogando.senha:", $scope.usuarioLogando.senha);
+
+			$http.post('/auth/login', $scope.usuarioLogando).success(function(response){
+				console.log("Logar - Response: ", response);
+
+				if(response.status == 200){ 
+					$scope.login = true;
+					console.log("login: ",$scope.login );	
+					window.location.replace("http://localhost:3000/#/home");
+					window.location.reload();
+				}else{
+					//ou rota de erro
+					$scope.login = false;
+					console.log("login: ",$scope.login );
+					alert('Login falhou');
+				}
+			});
+		};
+
+		$scope.logarComo= function(login, senha){
+			console.log("Logando...");			
+
+			$scope.usuarioLogando = [];
+			$scope.usuarioLogando.login = login;
+			$scope.usuarioLogando.senha = senha;
+
+			console.log("usuarioLogando.login:", $scope.usuarioLogando.login);
+			console.log("usuarioLogando.senha:", $scope.usuarioLogando.senha);
+			
 			$http.post('/auth/login', $scope.usuarioLogando).success(function(response){
 				console.log("Logar - Response: ", response);
 
