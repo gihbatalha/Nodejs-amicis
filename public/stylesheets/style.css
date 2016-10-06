@@ -116,6 +116,8 @@ span.badge.new {
   line-height: 10px;
 }
 
+/* Inputs Fields 
+                =====================================================================================================*/
 input:not([type]):focus:not([readonly]),
 input[type=text]:focus:not([readonly]),
 input[type=password]:focus:not([readonly]),
@@ -267,22 +269,12 @@ input[type=range]::-ms-thumb {
   background: #a33838;
 }
 
+.input-field input[type=text]:focus + label {
+     color: #000;
+}
+
 .side-nav a.btn-floating:hover {
   background-color: #a33838;
-}
-
-.user-image {
-  height: 50px;
-  width: 50px;
-  border-radius: 10%;
-}
-
-.user-name {
-  font-size: 35px;
-  position: relative;
-  top: -10px;
-  color: white;
-  font-family: cursive;
 }
 
 .material-icons.send {
@@ -292,15 +284,12 @@ input[type=range]::-ms-thumb {
   color: rgb(55, 55, 55);
 }
 
-.input-field input[type=text]:focus + label {
-     color: #000;
-}
-
+/* Modal */
 .modal.comment, .modal.login {
   height: 45%;
 }
 
-
+/* Textarea */
 textarea.materialize-textarea {
   overflow-y: hidden;
   /* prevents scroll bar flash */
@@ -340,9 +329,8 @@ nav.segundaL {
   width: 900px;
 }
 
-/* Select Field
-   ========================================================================== */
-
+/* Select Field 
+                ================================================================================================*/
 select {
   display: inline-block;
 }
@@ -466,6 +454,15 @@ select:disabled {
   width: 150px;
 }
 
+a:link.title, a:visited.title, a:active.title {
+  color: rgba(0, 0, 0, 0.87);
+}
+
+a:hover.title {
+  color: rgba(0, 0, 0, 0.7);
+}
+
+
 img.receita {
   width: 100px;
   height: 100px;
@@ -490,10 +487,16 @@ img.receita {
 
 }
 
-a:link.title, a:visited.title, a:active.title {
-  color: rgba(0, 0, 0, 0.87);
+.user-image {
+  height: 50px;
+  width: 50px;
+  border-radius: 10%;
 }
 
-a:hover.title {
-  color: rgba(0, 0, 0, 0.7);
+.user-name {
+  font-size: 35px;
+  position: relative;
+  top: -10px;
+  color: white;
+  font-family: cursive;
 }
