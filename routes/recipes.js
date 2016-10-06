@@ -23,7 +23,7 @@ router.get('/', function(req, res) {
 router.get('/:valueParam/:qualParam', function(req, res) {
   var varQualParam = req.params.qualParam ;
 
-  console.log(varQualParam);
+  console.log("O parametro eh:", varQualParam);
 
   if(varQualParam == 'categorias'){
     console.log("get categorias");
@@ -39,9 +39,16 @@ router.get('/:valueParam/:qualParam', function(req, res) {
     });
   }//end if
 
+  if(varQualParam == 'id'){
+    console.log("get id");
+    Recipe.find({ '_id' : req.params.valueParam},function(err, recipes){
+      res.json(recipes);
+    });
+  }//end if
+
 });
 
-router.get('/:valueParam/:qualParam', function(req, res) {
+/*router.get('/:valueParam/:qualParam', function(req, res) {
   var varQualParam = req.params.qualParam ;
 
   console.log("ROUTE- QualParam:", varQualParam);
@@ -68,7 +75,7 @@ router.get('/:valueParam/:qualParam', function(req, res) {
   }//end if
 
 });
-
+*/
 router.post('/', function(req, res) {
       var newRecipe = new Recipe(req.body);
       console.log("New Recipe: ",newRecipe);

@@ -15,6 +15,8 @@ angular.module('app')
 			  $scope.title = $scope.valueParam;
 			  $scope.attribute = "nome"; //qual o atributo que será exibido
 
+			  $scope.recipe=[];
+
 
 			   /*if($scope.param == 'viewRecipes'){ //ver todas as receitas
 				   	$http.get('/recipes').success(function(response){
@@ -54,6 +56,7 @@ angular.module('app')
 
 			  		$http.get('/recipes/'+ id +'/id').success(function(response){
 			  			console.log("Resposta detailsOf: ",response);
+			  			$scope.recipe = response;
 			  		});
 			  }
 	  
