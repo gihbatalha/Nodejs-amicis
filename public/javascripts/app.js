@@ -4,6 +4,7 @@ angular.module("app",['ui.router'])
 		$urlRouterProvider.otherwise('/');
 		$stateProvider
 			/*.state('route1',{url:'/route1', templateUrl:'/app/templates/route1.html', controller:'UsersController'})*/
+			.state('home', {url:'/index'})
 			.state('newUser', {url:'/newUser', templateUrl:'/app/users/templates/newUser.html', controller:'UsersController'})
 			.state('newRecipe', {url:'/newRecipe', templateUrl:'/app/recipes/templates/newRecipe.html', controller:'recipeController'})
 			/*.state('newComment', {url:'/newComment', templateUrl:'/app/comments/templates/newComment.html', controller:'commentController'})*/
@@ -29,8 +30,17 @@ angular.module("app",['ui.router'])
 			$scope.usuarioSendoAdicionado.sexo = $scope.sexo;
 			$http.post('/users', $scope.usuarioSendoAdicionado).success(function(response){
 				console.log(response);
-				$state.go('route1'); //após add coom sucesso, direciona pra route1
+
+				$scope.usuarioLogando.login = $scope.usuarioSendoAdicionado.login;
+				$scope.usuarioLogando.senha = $scope.usuarioSendoAdicionado.senha;
+				$scope.login();
+
+				//$state.go('home'); //após add coom sucesso, direciona pra route1
+
+				
 			});
+
+			
 		};
 
 		$scope.colocarSexo = function(qualSexo){
