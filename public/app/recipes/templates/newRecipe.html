@@ -1,29 +1,6 @@
-<!--<h2> Nova Receita </h2>
-
-
-<span>Nome da receita: </span> <br>
-<input type="text"     ng-model="novaReceita.nome"/><br>
-<!-- <span>Ingredientes: </span><br>
-<input type="text"     ng-model="novaReceita.ingredientes"/><br> -->
-<!--
-<span>Modo de preparo: </span><br>
-<input type="text"     ng-model="novaReceita.modoPreparo"/><br>
-<span>Tempo de preparo: </span><br>
-<input type="text"     ng-model="novaReceita.tempoPreparo"/><br>
-<span>Rendimento: </span><br>
-<input type="text"     ng-model="novaReceita.rendimento"/><br>
-<!-- tags -->
-<!-- categorias -->
-<!--
-
-<a ng-click="add()">Cadastrar</a>
-
-<br><br>  -->
-
-<!-- Modal Structure -->
     <div class="row">
       <div class="col s12 m6">
-        <div class="modal" id="modalNewRecipe">
+        <div class="modal modal-fixed-footer" id="modalNewRecipe">
           <div class="modal-content">
             <h4>Nova receita</h4>
             <form class="col s12">
@@ -67,7 +44,7 @@
               <div class="row">
               	<div class="input-field col s3">
                   <input id="name" type="number" class="validate" ng-model="novaReceita.tempoPreparo"/>
-                  <label for="name">Tempo de preparo</label>
+                  <label for="name">Tempo de preparo (em minutos)</label>
                 </div>
                 <div class="input-field col s3 offset-s3">
                   <input id="name" type="number" class="validate" ng-model="novaReceita.rendimento"/>
@@ -77,10 +54,8 @@
             </form>
           </div>
           <div class="modal-footer">
-            <!-- <a href="#!" class="modal-action modal-close waves-effect btn-flat">Sair</a>
-            <a ng-click="add()" class="modal-action modal-close waves-effect btn-flat">Cadastrar</a> --> 
-            <a ng-click="add()" >Cadastrar</a>
-
+            <a href="#!" class="modal-action modal-close waves-effect btn-flat">Sair</a>
+            <a ng-click="add()" class="modal-action modal-close waves-effect btn-flat">Cadastrar</a> 
           </div>
         </div>
       </div>

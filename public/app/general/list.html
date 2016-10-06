@@ -6,18 +6,19 @@
       	<a ui-sref="viewDetailsRecipe({id: i._id})" ng-click="detailsOf(i._id)" class="title">{{ i.nome }}</a>
       	<!-- <a ng-click="add(i)" ng-controller="bookController"> Adicionar ao livro de receitas </a> -->
 	    <span class="info receita dir"> 
-	    	Enviado por: {{ autorRecipe}}<br>
+	    	Enviado por: {{autorRecipe}}<br>
 	    </span>
 	    	
-	    	<div class="tags receita dir">
-		    	<span  > Tags: </span>
-		    	<ul>
-		    		<li ng-repeat="tag in i.tags"> {{tag}} </li>
-		        <ul>
-	        </div>	    
+	    <div class="tags receita dir">
+		    <span > Tags: </span>
+		    <div class="chip" ng-repeat="tag in i.tags">
+				<span> {{tag}} </span>
+			</div>
+	    </div>	    
 
 	    <span class="info receita esq"> 
-	    	Tempo Rendimento: {{ i.tempoPreparo }} minutos<br>
+	    	Tempo: {{ i.tempoPreparo }} minutos<br>
+	    	Rendimento: {{i.rendimento}} porções<br>
 	    	Avaliação: {{ i.avaliacao }}
 	    </span>
     </li>
