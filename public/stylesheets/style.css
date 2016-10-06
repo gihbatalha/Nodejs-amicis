@@ -94,6 +94,34 @@ span.badge.new {
   padding: 10px;
 }
 
+.chip {
+  display: inline-block;
+  height: 27px;
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.6);
+  line-height: 27px;
+  padding: 0 8px;
+  margin: 1px;
+  border-radius: 5px;
+  background-color: #ef9a9a;
+}
+
+.chip img {
+  float: left;
+  margin: 0 8px 0 -12px;
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+}
+
+.chip i.material-icons {
+  cursor: pointer;
+  float: right;
+  font-size: 16px;
+  line-height: 32px;
+  padding-left: 8px;
+}
 .btn, .btn-large {
   background-color: #a33838;
 }
@@ -106,6 +134,14 @@ span.badge.new {
   background-color: #a33838;
 }
 
+.dropdown-content {
+  width: 120px;
+  overflow-y: auto;
+  opacity: 0;
+  position: absolute;
+  z-index: 999;
+}
+
 .dropdown-content li {
   min-height: 25px;
 }
@@ -116,8 +152,6 @@ span.badge.new {
   line-height: 10px;
 }
 
-/* Inputs Fields 
-                =====================================================================================================*/
 input:not([type]):focus:not([readonly]),
 input[type=text]:focus:not([readonly]),
 input[type=password]:focus:not([readonly]),
@@ -323,6 +357,15 @@ nav .brand-logo {
   white-space: nowrap;
 }
 
+nav ul a {
+  transition: background-color .3s;
+  font-size: 1rem;
+  color: #fff;
+  display: inline-block;
+  padding: 0 23px;
+  cursor: pointer;
+}
+
 nav {
   background-color: #c62828;
 }
@@ -336,18 +379,18 @@ nav.segundaL {
  nav.segundaL i {
   line-height: 40px;
   height: 40px;
+  position: relative;
+  right: 14px;
 }
 
 .nav-wrapper.segundaL {
   position: relative;
-  left: 35%;
+  left: 30%;
   margin: -29px 0;
   height: 100%;
   width: 900px;
 }
 
-/* Select Field 
-                ================================================================================================*/
 select {
   display: inline-block;
 }
