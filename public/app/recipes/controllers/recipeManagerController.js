@@ -59,9 +59,15 @@ angular.module('app')
 			  			$scope.details = response[0];
 
 			  			console.log("$scope.details", $scope.details);
+			  			console.log("$scope.detaiils._id", $scope.details._id);
+			  			console.log("$scope.detaiils.nome", $scope.details.nome);
 
 			  		});
-			  }
+
+
+				}
+
+			  
 	  
 
 	});

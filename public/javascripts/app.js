@@ -14,9 +14,9 @@ angular.module("app",['ui.router'])
 			/*.state('viewTags',{url:'/tags', templateUrl:'/app/general/list.html', controller:'tagManagerController'})*/
 			.state('viewRecipes',{url:'/recipes', templateUrl:'/app/general/list.html', controller:'recipeManagerController'})
 			/*.state('viewCategories',{url:'/categories', templateUrl:'/app/general/list.html', controller:'categoryController'})*/
-
-			.state('viewRecipesByParam',{url:'/:valueParam?param', templateUrl:'/app/general/list.html', controller:'recipeManagerController'})
-			.state('viewDetailsRecipe',{url:'/:id', templateUrl:'/app/general/details.html', controller:'recipeManagerController'});
+			.state('details',{url:'/details', templateUrl:'/app/general/details.html', controller:'recipeManagerController'})
+			.state('viewRecipesByParam',{url:'/:valueParam?param', templateUrl:'/app/general/list.html', controller:'recipeManagerController'});
+			
 
 
 	})
