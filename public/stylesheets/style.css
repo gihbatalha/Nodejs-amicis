@@ -3,11 +3,6 @@
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
-a {
-  /*color: #00B7FF;
-  color:#2c3e50;
-}
-
 .menu-principal{ 
 	height: 150px;
 	border-radius: 0px; /*não teve o resultado esperado
@@ -27,61 +22,29 @@ a {
 }
 */
 
-.teal.lighten-1 {
-  background-color: #a33838 !important;
+a {
+  color: #00B7FF;
+  color:#2c3e50;
 }
 
-.teal-text.text-lighten-1 {
-  color: #a33838 !important;
+a:link.title, a:visited.title, a:active.title {
+  color: rgba(0, 0, 0, 0.87);
 }
 
-.collection .collection-item.avatar {
-  min-height: 25px;
-  padding-left: 10px;
-  height: 170px;          /*----------------------------12.09.2016 - adicionei isso para caber as tags. Vamos editar isso para ser mais dinamico ----------------------------------------------*/
+a:hover.title {
+  color: rgba(0, 0, 0, 0.7);
 }
 
-.collection .collection-item.avatar .circle {
-  width: 40px; /*22px*/
-  height: 40px; /*22px*/
-  left: 10px;
-}
-
-.collection .collection-item.avatar .title {
-  font-size: 24px; /*12px*/
-  position: absolute;
-  top: 20px;
-  left: 130px; 
-}
-
-.collection .collection-item.active {
+.btn, .btn-large {
   background-color: #a33838;
 }
 
-.collection a.collection-item {
-  color: #a33838;
+.btn-floating {
+  background-color: #a33838;
 }
 
-.collection a.collection-item:not(.active):hover {
-  background-color: #eee;
-}
-
-.secondary-content {
-  color: #a33838;
-}
-
-span.badge {
-  font-size: 0.6rem;
-  top: 10px;
-  right: 7px;
-}
-
-span.badge.new {
-  font-size: 0.6rem;
-}
-
-.truncate {
-  font-size: 12px;
+.btn-floating:hover {
+  background-color: #a33838;
 }
 
 .card {
@@ -92,6 +55,44 @@ span.badge.new {
 
 .card .card-content {
   padding: 10px;
+}
+
+.carousel {
+  overflow: hidden;
+  position: relative;
+  width: 300px;
+  height: 400px;
+  -webkit-perspective: 500px;
+          perspective: 500px;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform-origin: 0% 100%;
+          transform-origin: 0% 100%;
+}
+
+.carousel .carousel-item {
+  width: 200px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.carousel .carousel-item img {
+  width: 100%;
+}
+
+.carousel.carousel-slider {
+  top: 0;
+  left: 400px;
+  height: 0px;
+}
+
+.carousel.carousel-slider .carousel-item {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .chip {
@@ -122,16 +123,36 @@ span.badge.new {
   line-height: 32px;
   padding-left: 8px;
 }
-.btn, .btn-large {
+
+.collection .collection-item.avatar {
+  min-height: 25px;
+  padding-left: 10px;
+  height: 135px;          
+}
+
+.collection .collection-item.avatar .circle {
+  width: 40px; /*22px*/
+  height: 40px; /*22px*/
+  left: 10px;
+}
+
+.collection .collection-item.avatar .title {
+  font-size: 24px; /*12px*/
+  position: absolute;
+  top: 20px;
+  left: 130px; 
+}
+
+.collection .collection-item.active {
   background-color: #a33838;
 }
 
-.btn-floating {
-  background-color: #a33838;
+.collection a.collection-item {
+  color: #a33838;
 }
 
-.btn-floating:hover {
-  background-color: #a33838;
+.collection a.collection-item:not(.active):hover {
+  background-color: #eee;
 }
 
 .dropdown-content {
@@ -150,6 +171,27 @@ span.badge.new {
   font-size: 12px;
   color: black;
   line-height: 10px;
+}
+
+.first {
+  z-index: -10;
+}
+
+img.receita {
+  width: 100px;
+  height: 100px;
+}
+
+.info.receita.dir {
+  position: absolute;
+  top: 55px;
+  left: 150px;
+}
+
+.info.receita.esq {
+  position: absolute;
+  top: 55px;
+  left: 87%;
 }
 
 input:not([type]):focus:not([readonly]),
@@ -307,10 +349,6 @@ input[type=range]::-ms-thumb {
      color: #000;
 }
 
-.side-nav a.btn-floating:hover {
-  background-color: #a33838;
-}
-
 .material-icons.send {
   position: relative;
   top: -2px;
@@ -339,12 +377,6 @@ input[type=range]::-ms-thumb {
   border-top: 1px solid rgba(0, 0, 0, 0.1);
   position: absolute;
   bottom: 0;
-}
-
-textarea.materialize-textarea {
-  overflow-y: hidden;
-  /* prevents scroll bar flash */
-  padding: 0 0;
 }
 
 nav .brand-logo {
@@ -389,6 +421,16 @@ nav.segundaL {
   margin: -29px 0;
   height: 100%;
   width: 900px;
+}
+
+.prefix ~ .select-wrapper {
+  margin-left: 3rem;
+  width: 92%;
+  width: calc(100% - 3rem);
+}
+
+.prefix ~ label {
+  margin-left: 3rem;
 }
 
 select {
@@ -477,21 +519,15 @@ select:disabled {
   background-color: transparent;
 }
 
-.prefix ~ .select-wrapper {
-  margin-left: 3rem;
-  width: 92%;
-  width: calc(100% - 3rem);
-}
-
-.prefix ~ label {
-  margin-left: 3rem;
-}
-
 .select-dropdown li img {
   height: 40px;
   width: 40px;
   margin: 5px 15px;
   float: right;
+}
+
+.secondary-content {
+  color: #a33838;
 }
 
 .select-dropdown li.optgroup {
@@ -514,30 +550,18 @@ select:disabled {
   width: 150px;
 }
 
-a:link.title, a:visited.title, a:active.title {
-  color: rgba(0, 0, 0, 0.87);
+.side-nav a.btn-floating:hover {
+  background-color: #a33838;
 }
 
-a:hover.title {
-  color: rgba(0, 0, 0, 0.7);
+span.badge {
+  font-size: 0.6rem;
+  top: 10px;
+  right: 7px;
 }
 
-
-img.receita {
-  width: 100px;
-  height: 100px;
-}
-
-.info.receita.dir {
-  position: absolute;
-  top: 55px;
-  left: 150px;
-}
-
-.info.receita.esq {
-  position: absolute;
-  top: 55px;
-  left: 1250px;
+span.badge.new {
+  font-size: 0.6rem;
 }
 
 .tags.receita.dir {
@@ -545,6 +569,24 @@ img.receita {
   top: 75px;
   left: 150px;
 
+}
+
+.teal.lighten-1 {
+  background-color: #a33838 !important;
+}
+
+.teal-text.text-lighten-1 {
+  color: #a33838 !important;
+}
+
+textarea.materialize-textarea {
+  overflow-y: hidden;
+  /* prevents scroll bar flash */
+  padding: 0 0;
+}
+
+.truncate {
+  font-size: 12px;
 }
 
 .user-image {
