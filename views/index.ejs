@@ -29,7 +29,6 @@
 
     <script src="/javascripts/app.js"></script>
     <script src="/javascripts/main.js"></script>
-    <script src="/javascripts/appMaterialize.js"></script>
         
   </head>
 
@@ -37,7 +36,7 @@
     <div class="row">
       <nav>
         <div class="nav-wrapper">
-          <a href="#!" class="brand-logo">Amicis</a>
+          <a ui-sref="home" class="brand-logo">Amicis</a>
           <ul class="right hide-on-med-and-down">    
 
             <!-- Dropdown Structure -->
@@ -53,7 +52,7 @@
                 <li><a ui-sref="viewRecipesByParam({param : 'tags', valueParam: 'Lalalala'})">  Lalalala </a></li>
             </ul>
 
-            <li><a ng-hide="login" class="menu-itens" ui-sref="login">  Entrar   </a></li>
+            <li><a ng-hide="login" class="modal-trigger" ui-sref="login">  Entrar   </a></li>
             <li><a ng-hide="login" class="modal-trigger" ui-sref="newUser">  Cadastre-se   </a></li>
 
             <li>
@@ -113,31 +112,34 @@
         </nav>
     </div>
 
-
-    <div ui-view class="first">
+    <div ui-view>
         <!--onde será colocada as views -->
+
+        <div class="modal login" id="modalLogin">
+          <div class="modal-content">
+            <h4>Acessar conta</h4>
+            <form class="col s12">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <span id="erro"></span>
+                        <input id="login" type="text" ng-model="usuarioLogando.login">
+                        <label for="login">Login</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="password" type="password" ng-model="usuarioLogando.senha">
+                        <label for="password">Senha</label>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <a href="#" class="modal-action modal-close waves-effect btn-flat">Sair</a>
+            <a ng-controller="loginController" ng-click="logar()" class="modal-action modal-close waves-effect btn-flat">Entrar</a>
+        </div>
     </div>
-
-
-    <div class="carousel carousel-slider center" data-indicators="true" style="height: 250px;">
-        <div class="carousel-item red white-text" href="#one!">
-            <h2>First Panel</h2>
-            <p class="white-text">This is your first panel</p>
-        </div>
-        <div class="carousel-item amber white-text" href="#two!">
-            <h2>Second Panel</h2>
-            <p class="white-text">This is your second panel</p>
-        </div>
-        <div class="carousel-item green white-text" href="#three!">
-            <h2>Third Panel</h2>
-            <p class="white-text">This is your third panel</p>
-        </div>
-        <div class="carousel-item blue white-text" href="#four!">
-            <h2>Fourth Panel</h2>
-            <p class="white-text">This is your fourth panel</p>
-        </div>
     </div>
-
 
     <!-- Controllers -->
     <script src="/app/auth/controllers/loginController.js"></script>  

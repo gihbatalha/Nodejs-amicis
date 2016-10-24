@@ -81,6 +81,8 @@ angular.module('app')
 			console.log("Init...." );	
 			$scope.checkLogged();
 			console.log("Init - Login: " + $scope.login );
+			console.log("Teste");
+			$state.go("home");
 		};
 
 

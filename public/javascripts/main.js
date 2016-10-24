@@ -5,7 +5,7 @@ $(document).ready(function(){
 
      	// Next slide
 		$('.carousel').carousel('next');
-		$('.carousel').carousel('next', 25);
+
 		
     });
 });
